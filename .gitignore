@@ -1,0 +1,12 @@
+node_modules/
+cdk.out/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+web/dist/
+web/node_modules/
+web/public/config.json
+.env*
+scratch/
+test-results/

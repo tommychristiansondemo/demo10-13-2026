@@ -1,0 +1,322 @@
+
+[1m== Step 0: activate Claude 5.x models (account-level; idempotent)[0m
+[1mRegion us-east-1 · account 154833006816[0m
+  [32m✓[0m Anthropic use-case form is on file for this account
+
+[1mActivating 7 Claude 5.x model(s)[0m
+  [32m✓[0m anthropic.claude-opus-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-haiku-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-opus-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5-1: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+
+[1mWaiting for agreements (up to 5 min)[0m
+
+[1mLive Converse check[0m
+  [31m✗[0m us.anthropic.claude-opus-5-5: AccessDeniedException: anthropic.claude-opus-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+  [31m✗[0m us.anthropic.claude-fable-5: AccessDeniedException: anthropic.claude-fable-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS
+  [31m✗[0m us.anthropic.claude-haiku-5-5: AccessDeniedException: anthropic.claude-haiku-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-opus-5: AccessDeniedException: anthropic.claude-opus-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS 
+  [31m✗[0m us.anthropic.claude-fable-5-1: AccessDeniedException: anthropic.claude-fable-5-1 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-sonnet-5-5: AccessDeniedException: anthropic.claude-sonnet-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact 
+  [31m✗[0m us.anthropic.claude-sonnet-5: AccessDeniedException: anthropic.claude-sonnet-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+
+0/7 Claude 5.x models answer live calls.
+  [33m![0m not every Claude 5.x model is usable yet; the app uses modelId=us.anthropic.claude-sonnet-4-6
+
+[1m== Unit + protocol tests[0m
+.................                                                        [100%]
+=============================== warnings summary ===============================
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_unknown_claim_is_tool_error
+  /usr/lib/python3.12/contextlib.py:105: DeprecationWarning: Use `streamable_http_client` instead.
+    self.gen = func(*args, **kwds)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 5 warnings in 2.97s
+  [32m✓[0m orchestrator tests passed
+
+[1m== Build web apps[0m
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 25 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.15 kB │ gzip:  0.61 kB
+dist/assets/index-DY6LVBOV.css   16.32 kB │ gzip:  4.14 kB
+dist/assets/index-B3Pz9EsA.js   262.54 kB │ gzip: 80.88 kB │ map: 1,154.99 kB
+
+✓ built in 307ms
+  [32m✓[0m web/dist built (Claims Workbench)
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 26 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.88 kB │ gzip:  0.52 kB
+dist/assets/index-DxYDUmes.css    8.87 kB │ gzip:  2.62 kB
+dist/assets/index-Bbx4eWX7.js   309.16 kB │ gzip: 97.83 kB │ map: 1,357.98 kB
+
+✓ built in 336ms
+  [32m✓[0m insights-web/dist built (Class Insights)
+
+[1m== CDK bootstrap (ClaimsWb-CDKToolkit, qualifier claimswb)[0m
+  [32m✓[0m already bootstrapped
+
+[1m== Deploy stacks[0m
+AI agent detected
+Bundling asset ClaimsWb-Foundation/SignupTrigger/Code/Stage...
+
+  ...99e444ac9878f028cba41f9854be131b20ab5601913009e5-building/index.js  2.1kb
+
+⚡ Done in 5ms
+Bundling asset ClaimsWb-Api/Api/Code/Stage...
+
+  ...27229ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js  1.1mb ⚠️
+  ...9ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js.map  1.8mb
+
+⚡ Done in 92ms
+Bundling asset ClaimsInsights/InsightsApi/Code/Stage...
+
+  ...c24dbd691c93a7f1c976a55ba0fc083e2c9f0667ed86bf-building/index.js   54.3kb
+  ...bd691c93a7f1c976a55ba0fc083e2c9f0667ed86bf-building/index.js.map  109.9kb
+
+⚡ Done in 10ms
+Bundling asset ClaimsInsights/InsightsChat/Code/Stage...
+
+  ...a4be2ebfd675476a9674f763a17138fc5a24776741eba1-building/index.js   66.1kb
+  ...2ebfd675476a9674f763a17138fc5a24776741eba1-building/index.js.map  129.7kb
+
+⚡ Done in 13ms
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/claims_policy_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/damage_repair_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+✨  Synthesis time: 7.57s
+
+ClaimsWb-Foundation: start: Building Api/Code
+ClaimsWb-Foundation: success: Built Api/Code
+ClaimsWb-Foundation: start: Building DeploySite/Asset1
+ClaimsWb-Foundation: success: Built DeploySite/Asset1
+ClaimsWb-Foundation: start: Building DeploySite/Asset2
+ClaimsWb-Foundation: success: Built DeploySite/Asset2
+ClaimsWb-Foundation: start: Building InsightsApi/Code
+ClaimsWb-Foundation: success: Built InsightsApi/Code
+ClaimsWb-Foundation: start: Building InsightsChat/Code
+ClaimsWb-Foundation: success: Built InsightsChat/Code
+ClaimsWb-Foundation: start: Building DeploySite/Asset1
+ClaimsWb-Foundation: success: Built DeploySite/Asset1
+ClaimsWb-Foundation: start: Building DeploySite/Asset2
+ClaimsWb-Foundation: success: Built DeploySite/Asset2
+ClaimsWb-Foundation: start: Building ClaimsWb-Foundation Template
+ClaimsWb-Foundation: success: Built ClaimsWb-Foundation Template
+ClaimsWb-Api: start: Building ClaimsWb-Api Template
+ClaimsWb-Api: success: Built ClaimsWb-Api Template
+ClaimsWb-Web: start: Building ClaimsWb-Web Template
+ClaimsWb-Web: success: Built ClaimsWb-Web Template
+ClaimsInsights: start: Building ClaimsInsights Template
+ClaimsInsights: success: Built ClaimsInsights Template
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset2 (154833006816-us-east-1-12920e1c)
+ClaimsWb-Foundation: start: Publishing Api/Code (154833006816-us-east-1-0a070ff7)
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset1 (154833006816-us-east-1-229ed474)
+ClaimsWb-Foundation: start: Publishing InsightsChat/Code (154833006816-us-east-1-fe2cd36e)
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset1 (154833006816-us-east-1-928e594c)
+ClaimsWb-Foundation: start: Publishing ClaimsWb-Foundation Template (154833006816-us-east-1-f5990acc)
+ClaimsWb-Foundation: start: Publishing InsightsApi/Code (154833006816-us-east-1-4448b5ee)
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset2 (154833006816-us-east-1-549d9f2c)
+ClaimsWb-Foundation: success: Published DeploySite/Asset2 (154833006816-us-east-1-12920e1c)
+ClaimsWb-Foundation: success: Published InsightsApi/Code (154833006816-us-east-1-4448b5ee)
+ClaimsWb-Foundation: success: Published InsightsChat/Code (154833006816-us-east-1-fe2cd36e)
+ClaimsWb-Foundation: success: Published DeploySite/Asset2 (154833006816-us-east-1-549d9f2c)
+ClaimsWb-Foundation: success: Published ClaimsWb-Foundation Template (154833006816-us-east-1-f5990acc)
+ClaimsWb-Foundation: success: Published DeploySite/Asset1 (154833006816-us-east-1-928e594c)
+ClaimsWb-Foundation: success: Published DeploySite/Asset1 (154833006816-us-east-1-229ed474)
+ClaimsWb-Foundation: success: Published Api/Code (154833006816-us-east-1-0a070ff7)
+ClaimsWb-Foundation
+ClaimsWb-Foundation: creating CloudFormation changeset...
+ClaimsWb-Foundation: deploying... [1/6]
+
+✅  ClaimsWb-Foundation
+
+✨  Deployment time: 7.53s
+
+Outputs:
+ClaimsWb-Foundation.CognitoDomainUrl = https://claims-workbench-154833006816.auth.us-east-1.amazoncognito.com
+ClaimsWb-Foundation.ExportsOutputFnGetAttDataKey17AFBB84ArnCE2A1BC6 = arn:aws:kms:us-east-1:154833006816:key/c36a41e0-1616-4194-8a55-e0eb17b2c357
+ClaimsWb-Foundation.ExportsOutputFnGetAttRunsE45A2291Arn9AFA3150 = arn:aws:dynamodb:us-east-1:154833006816:table/claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputFnGetAttUsers0A0EEA89Arn6658B146 = arn:aws:cognito-idp:us-east-1:154833006816:userpool/us-east-1_MDRwvpMeS
+ClaimsWb-Foundation.ExportsOutputRefRunsE45A229154DE1E8E = claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputRefUsers0A0EEA89A1309EA5 = us-east-1_MDRwvpMeS
+ClaimsWb-Foundation.ExportsOutputRefUsersDomainC663232474DE62C1 = claims-workbench-154833006816
+ClaimsWb-Foundation.ExportsOutputRefUsersWebClient8EE36D427F5C395C = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.RunsTableName = claims-workbench-runs
+ClaimsWb-Foundation.UserPoolClientId = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.UserPoolId = us-east-1_MDRwvpMeS
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Foundation/efaeae80-c736-11f1-a71e-0affff84d99f
+ClaimsWb-McpRuntimes
+ClaimsWb-McpRuntimes: deploying... [2/6]
+
+✅  ClaimsWb-McpRuntimes (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeArn0FFBF475 = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeId0D720B92 = claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeArnBEE564CB = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeIdC38589E6 = damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.claimspolicymcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.damagerepairmcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-McpRuntimes/09408cb0-c737-11f1-8062-0ef131302bd7
+ClaimsWb-Api: start: Publishing ClaimsWb-Api Template (154833006816-us-east-1-b8e51e15)
+ClaimsInsights: start: Publishing ClaimsInsights Template (154833006816-us-east-1-41d24cbb)
+ClaimsWb-Api: success: Published ClaimsWb-Api Template (154833006816-us-east-1-b8e51e15)
+ClaimsWb-Api
+ClaimsInsights: success: Published ClaimsInsights Template (154833006816-us-east-1-41d24cbb)
+ClaimsWb-Api: creating CloudFormation changeset...
+ClaimsWb-Api: deploying... [3/6]
+
+✅  ClaimsWb-Api
+
+✨  Deployment time: 18.99s
+
+Outputs:
+ClaimsWb-Api.ApiFunctionName = claims-workbench-api
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionArn7019A171 = arn:aws:lambda:us-east-1:154833006816:function:claims-workbench-api
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionUrl9002A90E = https://ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws/
+ClaimsWb-Api.ExportsOutputRefApiF70053CD5653BA4D = claims-workbench-api
+ClaimsWb-Api.ExportsOutputRefApiLogs3D05D88BC2694364 = /aws/lambda/claims-workbench-api
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Api/3507fa40-c737-11f1-8805-12ffde131361
+ClaimsWb-Web: start: Publishing ClaimsWb-Web Template (154833006816-us-east-1-43ac91fe)
+ClaimsWb-Web: success: Published ClaimsWb-Web Template (154833006816-us-east-1-43ac91fe)
+ClaimsWb-Web
+ClaimsWb-Web: creating CloudFormation changeset...
+ClaimsWb-Web: deploying... [4/6]
+
+✅  ClaimsWb-Web
+
+✨  Deployment time: 49.47s
+
+Outputs:
+ClaimsWb-Web.DistributionDomain = d3g1g42qckvran.cloudfront.net
+ClaimsWb-Web.DistributionId = E2XMD0Z1LRKVO5
+ClaimsWb-Web.SiteUrl = https://www.awsteach.com
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Web/5b3429f0-c737-11f1-ac77-0effd0cd1d67
+ClaimsWb-Observability
+ClaimsWb-Observability: deploying... [5/6]
+
+✅  ClaimsWb-Observability (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-Observability.DashboardUrl = https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/claims-workbench
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Observability/4a380f80-c738-11f1-b8d9-12ffcef433f1
+ClaimsInsights
+ClaimsInsights: creating CloudFormation changeset...
+ClaimsInsights: deploying... [6/6]
+
+✅  ClaimsInsights
+
+✨  Deployment time: 419.62s
+
+Outputs:
+ClaimsInsights.InsightsDistributionId = EMCPCEXLW3DHQ
+ClaimsInsights.InsightsUrl = https://insights.awsteach.com
+ClaimsInsights.InsightsUserPoolClientId = 5d0hu06bn8m8ursjgs4gaqjc1m
+ClaimsInsights.KnowledgeBucket = claims-insights-knowledge-154833006816
+ClaimsInsights.KnowledgeObject = s3://claims-insights-knowledge-154833006816/projectknowledge.md
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsInsights/9a15f5b0-c744-11f1-aba3-0afff7a1daaf
+
+✨  Total time: 568.07s
+
+
+[1m== Demo users[0m
+  ✓ claims.analyst (claims-analysts)  password in Secrets Manager claims-workbench/demo-users/claims.analyst
+  ✓ claims.supervisor (claims-supervisors)  password in Secrets Manager claims-workbench/demo-users/claims.supervisor
+
+[1m== Smoke test (deployed)[0m
+Smoke test against https://www.awsteach.com
+  ✓ site serves the SPA over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ runtime config.json published
+  ✓ API health through CloudFront
+  ✓ unauthenticated API call rejected with JSON 401
+  ✓ Function URL not callable directly (IAM / OAC only)
+  ✓ analyst token verified, groups mapped
+  ✓ supervisor token verified
+  ✓ self sign-up as analyst: 6-char password, no email, auto-confirmed, correct group
+  ✓ self sign-up as supervisor: 6-char password, no email, auto-confirmed, correct group
+  ✓ unknown user type rejected at sign-up
+  ✓ queue: 8 claims via claims_policy.list_claims (1.5s)
+  ✓ claim detail: 6 tool calls across both MCP servers
+  ✓ tools/list on both runtimes: 5 + 5 tools
+  ✓ API uses the two deployed runtime ARNs
+  ✓ analysis stream opened
+  ✓ analysis completed in 69s
+  ✓ agent used both MCP servers (8 tool calls)
+  ✓ agent passed the estimate across the MCP boundary (reconcile_estimate)
+  ✓ no invalid citations
+    disposition=APPROVE_REPAIR_WITH_ADJUSTMENTS confidence=HIGH usage={'inputTokens': 15517, 'outputTokens': 6530, 'cacheReadTokens': 11784, 'cacheWriteTokens': 3928}
+    headline: Approve repair with adjustments — remove unsupported front-end lines L8/L9 ($364), add required ADAS calibration + pre/post scan ($375 missing); pursue subrogation against cited at-fault driver for full deductible recovery.
+  ✓ demo claim disposition is APPROVE_REPAIR_WITH_ADJUSTMENTS
+  ✓ demo claim includes a subrogation action
+  ✓ analyst cannot approve (403)
+  ✓ supervisor approves (200)
+  ✓ second decision rejected (409, first decision wins)
+  ✓ run persisted in DynamoDB
+
+27/27 checks passed
+
+[1m== Publish projectknowledge.md (Class Insights knowledge base)[0m
+  ✓ published s3://claims-insights-knowledge-154833006816/projectknowledge.md (31,113 chars, version UXhwu3sMVoylRCXD0_hnsyQC2QKUjBI3): 125 resources, 38 resource types, 17 services
+
+[1m== Class Insights smoke test[0m
+Class Insights smoke test against https://insights.awsteach.com
+  ✓ site serves the SPA from S3 over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ config.json: own Cognito client + link back to the Workbench
+  ✓ insights API health through CloudFront
+  ✓ unauthenticated request rejected (401)
+  ✓ claims-insights-api Function URL not callable directly (OAC only)
+  ✓ claims-insights-chat Function URL not callable directly (OAC only)
+  ✓ Workbench user signs in to Class Insights (shared user pool)
+  ✓ projectknowledge.md served from the knowledge bucket
+  ✓ knowledge file contains the generated live-inventory section
+  ✓ live inventory: 7 stacks, resource types counted
+  ✓ live inventory: both AgentCore runtimes READY
+  ✓ 6 allow-listed log sources
+Traceback (most recent call last):
+  File "/home/tommy/demo/scripts/insights_smoke.py", line 58, in <module>
+    logs = g('/api/insights/logs?source=workbench-api&minutes=1440&filter=' + httpx.QueryParams({"f": '{ $.log_type = "mcp_tool_call" }'})["f"]).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tommy/demo/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+deploy exit=1

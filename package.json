@@ -1,0 +1,47 @@
+{
+  "name": "claims-intelligence-workbench",
+  "version": "1.0.0",
+  "description": "Training demo: claims workbench with two MCP servers on Amazon Bedrock AgentCore Runtime",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "tsx --test services/api/test/*.test.ts services/insights/test/*.test.ts",
+    "test:py": ".venv/bin/python -m pytest -q mcp_servers/tests",
+    "synth": "cdk synth --quiet",
+    "local:api": "tsx services/api/src/local-server.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.1150.0",
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^26.6.5",
+    "aws-cdk": "^2.1145.0",
+    "aws-cdk-lib": "^2.273.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
+    "@aws-sdk/client-appconfig": "^3.1151.0",
+    "@aws-sdk/client-appconfigdata": "^3.1151.0",
+    "@aws-sdk/client-bedrock-agent": "^3.1151.0",
+    "@aws-sdk/client-bedrock-agent-runtime": "^3.1151.0",
+    "@aws-sdk/client-bedrock-agentcore-control": "^3.1150.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.1150.0",
+    "@aws-sdk/client-cloudformation": "^3.1150.0",
+    "@aws-sdk/client-cloudwatch": "^3.1150.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.1150.0",
+    "@aws-sdk/client-cost-explorer": "^3.1151.0",
+    "@aws-sdk/client-dynamodb": "^3.1150.0",
+    "@aws-sdk/client-lambda": "^3.1150.0",
+    "@aws-sdk/client-s3": "^3.1150.0",
+    "@aws-sdk/credential-provider-node": "^3.972.86",
+    "@aws-sdk/lib-dynamodb": "^3.1150.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@smithy/protocol-http": "^5.6.2",
+    "@smithy/signature-v4": "^5.7.4",
+    "aws-jwt-verify": "^5.2.1"
+  },
+  "private": true
+}

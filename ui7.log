@@ -1,0 +1,29 @@
+  ✓ supervisor signs in through Cognito managed login
+  ✓ work queue lists 8 claims
+  ✓ CLM-24817 claim file assembled from 6 MCP calls
+  ✓ live analysis streams tool calls and a recommendation
+  ✓ trace shows both MCP servers
+  ✓ grounding: all citations valid
+  ✓ citation chip opens the evidence
+  ✓ student registers as a SUPERVISOR (6-char password, no email)
+  ✓ self-registered supervisor approves the plan
+  ✓ MCP servers page enumerates 5 + 5 tools from the runtimes
+  ✗ Model routing: 5 ranked LLMs, linked sliders always total 100%, live preview: Locator expected to have count '5'
+  ✓ student registers as an ANALYST (phone viewport)
+  ✓ analyst sees the approved decision, cannot approve, no horizontal scroll
+  ✗ Model routing page works on a phone (no horizontal scroll): Locator expected to have count '5'
+  ✓ no uncaught page errors
+
+13/15 UI checks passed; screenshots in /home/tommy/demo/test-results
+  ✓ Workbench header links to Class Insights (sign-in page has the link too)
+  ✓ same account signs in to Class Insights (single sign-on via the shared Cognito pool)
+  ✓ chatbot streams reasoning, calls a live tool and answers
+  ✓ Project knowledge page renders projectknowledge.md from S3
+  ✓ Live inventory shows stacks, resource types and both AgentCore runtimes
+  ✓ Reasoning logs show both apps' prompts and model reasoning
+  ✓ Costs page: every LLM call priced, spend by model, Cost Explorer summary
+  ✓ Logs explorer preset returns MCP tool-call events
+  ✓ phone layout: no horizontal scroll
+  ✓ no uncaught page errors
+
+10/10 Class Insights UI checks passed; screenshots in /home/tommy/demo/test-results

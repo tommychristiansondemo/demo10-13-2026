@@ -1,0 +1,304 @@
+{
+  "_notice": "SYNTHETIC TRAINING DATA. Damage assessments are simulated; no real photos or computer-vision models are used.",
+  "as_of": "2026-10-13",
+  "assessment_model": "SynthVision-DA 2.3 (simulated photo-based damage model)",
+  "market_rates": {
+    "labor": {"body": 60, "refinish": 60, "frame": 76, "mechanical": 95, "diagnostic": 125, "glass": 80, "pdr": 70},
+    "paint_materials_per_refinish_hour": 36,
+    "tax_rate": 0.0725,
+    "labor_hours_per_shop_day": 5
+  },
+  "total_loss_rule": {"threshold_ratio": 0.75, "description": "Synthetic rule: total-loss evaluation when projected repair cost >= 75% of actual cash value (ACV)."},
+  "vehicles": {
+    "CLM-24817": {
+      "assessment": {
+        "assessment_id": "DA-55017",
+        "photos_analyzed": 14,
+        "photo_quality": "good",
+        "impact_point": "rear center, slight right bias",
+        "overall_severity": "moderate",
+        "severity_score": 0.58,
+        "confidence": 0.91,
+        "structural_damage": true,
+        "structural_notes": "Rear body panel deformation behind the bumper; trunk floor and rails show no buckling.",
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "rear", "part": "rear bumper cover", "damage_type": "puncture and tear", "severity": 0.72, "confidence": 0.95},
+          {"area": "rear", "part": "rear bumper reinforcement", "damage_type": "bent", "severity": 0.60, "confidence": 0.84},
+          {"area": "rear", "part": "tail lamp, right", "damage_type": "lens shattered", "severity": 0.80, "confidence": 0.97},
+          {"area": "rear", "part": "trunk lid", "damage_type": "dent at lower edge, misaligned", "severity": 0.48, "confidence": 0.88},
+          {"area": "rear", "part": "rear body panel", "damage_type": "pushed in 1-2 cm", "severity": 0.45, "confidence": 0.80}
+        ],
+        "areas_without_new_damage": ["front bumper cover", "hood", "fenders", "doors", "roof"],
+        "safety_systems_affected": ["Rear radar / blind spot information (BSI) sensors mounted behind rear bumper cover"],
+        "pre_existing_damage_indicators": ["Minor stone chips on hood leading edge, consistent with normal wear (not related to this loss)"],
+        "notes": "No damage detected forward of the rear doors. Rear sensor brackets are attached to the bumper cover being replaced."
+      },
+      "operations": [
+        {"op_code": "RBC-RPL", "description": "Rear bumper cover - replace", "operation": "replace", "labor_type": "body", "labor_hours": 2.5, "part": {"part_number": "SYN-71501-TVA-A00", "description": "Rear bumper cover (sensor ready)", "oem_price": 1045, "aftermarket_price": 410, "availability": "in stock - regional DC", "lead_days": 1}},
+        {"op_code": "RBR-RPL", "description": "Rear bumper reinforcement - replace", "operation": "replace", "labor_type": "body", "labor_hours": 1.0, "part": {"part_number": "SYN-71530-TVA-A00", "description": "Rear bumper reinforcement beam", "oem_price": 286, "aftermarket_price": 150, "availability": "in stock - regional DC", "lead_days": 1}},
+        {"op_code": "RBA-RPL", "description": "Rear bumper energy absorber - replace", "operation": "replace", "labor_type": "body", "labor_hours": 0.3, "part": {"part_number": "SYN-71570-TVA-A00", "description": "Rear energy absorber", "oem_price": 92, "aftermarket_price": 45, "availability": "in stock - regional DC", "lead_days": 1}},
+        {"op_code": "TLR-RPL", "description": "Tail lamp assembly, right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 0.5, "part": {"part_number": "SYN-33500-TVA-A11", "description": "Tail lamp assembly RH (LED)", "oem_price": 418, "aftermarket_price": 205, "availability": "ships from national DC", "lead_days": 2}},
+        {"op_code": "TRK-RPR", "description": "Trunk lid - repair", "operation": "repair", "labor_type": "body", "labor_hours": 3.0, "part": null},
+        {"op_code": "RBP-RPR", "description": "Rear body panel - repair", "operation": "repair", "labor_type": "frame", "labor_hours": 4.5, "part": null},
+        {"op_code": "RFN-REAR", "description": "Refinish rear bumper cover, trunk lid, rear body panel", "operation": "refinish", "labor_type": "refinish", "labor_hours": 5.2, "part": null},
+        {"op_code": "RDR-CAL", "description": "Rear radar / blind spot sensors - calibration (required after rear bumper cover replacement)", "operation": "calibrate", "labor_type": "diagnostic", "labor_hours": 2.0, "part": null, "required_reason": "OEM position statement (synthetic): calibrate BSI sensors whenever the rear bumper cover is replaced or removed."},
+        {"op_code": "SCAN-PP", "description": "Pre- and post-repair diagnostic scan", "operation": "diagnose", "labor_type": "diagnostic", "labor_hours": 1.0, "part": null, "required_reason": "Required for any repair involving ADAS sensors."}
+      ],
+      "allowed_misc_op_codes": ["MISC-HAZ"],
+      "valuation": {"acv": 24300, "salvage_estimate": 6100, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24822": {
+      "assessment": {
+        "assessment_id": "DA-55022",
+        "photos_analyzed": 22,
+        "photo_quality": "good",
+        "impact_point": "front center",
+        "overall_severity": "severe",
+        "severity_score": 0.93,
+        "confidence": 0.89,
+        "structural_damage": true,
+        "structural_notes": "Both front frame rails buckled behind the crush zone; sectioning not supported for this damage pattern.",
+        "airbags_deployed": true,
+        "drivable": false,
+        "fluid_leak": true,
+        "hidden_damage_risk": "high",
+        "damage_areas": [
+          {"area": "front", "part": "front bumper cover", "damage_type": "destroyed", "severity": 0.95, "confidence": 0.97},
+          {"area": "front", "part": "hood", "damage_type": "buckled", "severity": 0.90, "confidence": 0.95},
+          {"area": "front", "part": "radiator and condenser", "damage_type": "crushed, coolant leak", "severity": 0.92, "confidence": 0.86},
+          {"area": "front", "part": "frame rails", "damage_type": "buckled", "severity": 0.88, "confidence": 0.78},
+          {"area": "front", "part": "fenders", "damage_type": "crushed", "severity": 0.80, "confidence": 0.90},
+          {"area": "front", "part": "left front suspension", "damage_type": "wheel pushed back", "severity": 0.70, "confidence": 0.72},
+          {"area": "interior", "part": "front airbags", "damage_type": "deployed", "severity": 1.0, "confidence": 0.99}
+        ],
+        "areas_without_new_damage": ["rear", "roof"],
+        "safety_systems_affected": ["Supplemental restraint system (deployed)"],
+        "pre_existing_damage_indicators": [],
+        "notes": "Shop estimate is preliminary and omits frame rail replacement, fenders, suspension and scans."
+      },
+      "operations": [
+        {"op_code": "FBC-RPL", "description": "Front bumper cover - replace", "operation": "replace", "labor_type": "body", "labor_hours": 2.0, "part": {"part_number": "SYN-F-17757-CP9", "description": "Front bumper cover", "oem_price": 412, "aftermarket_price": 180, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "HOD-RPL", "description": "Hood - replace", "operation": "replace", "labor_type": "body", "labor_hours": 1.6, "part": {"part_number": "SYN-F-16612-CP9", "description": "Hood panel", "oem_price": 655, "aftermarket_price": 290, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "RAD-RPL", "description": "Radiator - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 2.2, "part": {"part_number": "SYN-F-8005-CP9", "description": "Radiator", "oem_price": 389, "aftermarket_price": 160, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "CND-RPL", "description": "A/C condenser - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 1.5, "part": {"part_number": "SYN-F-19712-CP9", "description": "A/C condenser", "oem_price": 318, "aftermarket_price": 140, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "FRL-RPL", "description": "Front frame rails, left and right - replace", "operation": "replace", "labor_type": "frame", "labor_hours": 18.0, "part": {"part_number": "SYN-F-RAIL-KIT", "description": "Front rail assemblies L/R", "oem_price": 1350, "aftermarket_price": null, "availability": "backorder", "lead_days": 12}},
+        {"op_code": "SRS-RPL", "description": "Airbag modules (driver, passenger), clock spring, SRS module - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 3.5, "part": {"part_number": "SYN-F-SRS-KIT", "description": "SRS replacement kit", "oem_price": 2480, "aftermarket_price": null, "availability": "ships from national DC", "lead_days": 4}},
+        {"op_code": "HDL-RPL", "description": "Headlamp assemblies, left and right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 1.0, "part": {"part_number": "SYN-F-13008-CP9", "description": "Headlamp assemblies L/R", "oem_price": 640, "aftermarket_price": 260, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "FND-RPL", "description": "Fenders, left and right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 2.2, "part": {"part_number": "SYN-F-16005-CP9", "description": "Front fenders L/R", "oem_price": 380, "aftermarket_price": 170, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "SUS-RPL", "description": "Left lower control arm and strut - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 2.8, "part": {"part_number": "SYN-F-3A423-CP9", "description": "Lower control arm and strut LF", "oem_price": 610, "aftermarket_price": 290, "availability": "in stock", "lead_days": 2}},
+        {"op_code": "RFN-FRONT", "description": "Refinish front end", "operation": "refinish", "labor_type": "refinish", "labor_hours": 7.0, "part": null},
+        {"op_code": "SCAN-PP", "description": "Pre- and post-repair diagnostic scan", "operation": "diagnose", "labor_type": "diagnostic", "labor_hours": 1.0, "part": null, "required_reason": "Required after SRS deployment."}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 7150, "salvage_estimate": 1450, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24830": {
+      "assessment": {
+        "assessment_id": "DA-55030",
+        "photos_analyzed": 4,
+        "photo_quality": "good",
+        "impact_point": "windshield, driver side",
+        "overall_severity": "minor",
+        "severity_score": 0.22,
+        "confidence": 0.96,
+        "structural_damage": false,
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "glass", "part": "windshield", "damage_type": "14-inch crack in driver's primary viewing area (not repairable)", "severity": 0.70, "confidence": 0.98}
+        ],
+        "areas_without_new_damage": ["body panels", "side glass"],
+        "safety_systems_affected": ["Forward camera (lane keep assist / pre-collision system) mounted on windshield"],
+        "pre_existing_damage_indicators": [],
+        "notes": "Crack length and location exceed repair limits; replacement required. Camera recalibration required after replacement."
+      },
+      "operations": [
+        {"op_code": "WSH-RPL", "description": "Windshield with acoustic interlayer - replace", "operation": "replace", "labor_type": "glass", "labor_hours": 1.5, "part": {"part_number": "SYN-T-56101-42F", "description": "Windshield, acoustic, camera bracket", "oem_price": 1180, "aftermarket_price": 610, "availability": "in stock", "lead_days": 1, "note": "Aftermarket glass may not support camera calibration for this model."}},
+        {"op_code": "WSM-RPL", "description": "Windshield molding and clips - replace", "operation": "replace", "labor_type": "glass", "labor_hours": 0.2, "part": {"part_number": "SYN-T-75533-42F", "description": "Molding and clip kit", "oem_price": 64, "aftermarket_price": 30, "availability": "in stock", "lead_days": 1}},
+        {"op_code": "FCAM-CAL", "description": "Forward camera - static calibration", "operation": "calibrate", "labor_type": "diagnostic", "labor_hours": 1.5, "part": null, "required_reason": "Required after windshield replacement."}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 31500, "salvage_estimate": 8200, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24835": {
+      "assessment": {
+        "assessment_id": "DA-55035",
+        "photos_analyzed": 9,
+        "photo_quality": "fair - two photos blurred",
+        "impact_point": "left side, doors and quarter panel",
+        "overall_severity": "moderate",
+        "severity_score": 0.55,
+        "confidence": 0.82,
+        "structural_damage": false,
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "left side", "part": "front door, left", "damage_type": "deep dent with crease", "severity": 0.62, "confidence": 0.88},
+          {"area": "left side", "part": "rear door, left", "damage_type": "dent with crease, paint loss", "severity": 0.66, "confidence": 0.86},
+          {"area": "left side", "part": "quarter panel, left", "damage_type": "dent", "severity": 0.40, "confidence": 0.79}
+        ],
+        "areas_without_new_damage": ["mirror, left (intact, no scuffs)", "front", "rear", "right side"],
+        "safety_systems_affected": [],
+        "pre_existing_damage_indicators": [
+          "Surface oxidation along crease edges on left rear door - estimated damage age more than 60 days",
+          "Undisturbed dirt and road film inside creases",
+          "Two distinct impact heights (48 cm and 71 cm) - inconsistent with a single vehicle impact"
+        ],
+        "notes": "Left mirror shows no damage in any photo."
+      },
+      "operations": [
+        {"op_code": "LFD-RPL", "description": "Front door shell, left - replace", "operation": "replace", "labor_type": "body", "labor_hours": 3.2, "part": {"part_number": "SYN-GM-84569931", "description": "Front door shell LH", "oem_price": 1120, "aftermarket_price": 520, "availability": "in stock", "lead_days": 3}},
+        {"op_code": "LRD-RPL", "description": "Rear door shell, left - replace", "operation": "replace", "labor_type": "body", "labor_hours": 3.0, "part": {"part_number": "SYN-GM-84569944", "description": "Rear door shell LH", "oem_price": 1065, "aftermarket_price": 480, "availability": "in stock", "lead_days": 3}},
+        {"op_code": "LQP-RPR", "description": "Quarter panel, left - repair", "operation": "repair", "labor_type": "body", "labor_hours": 5.0, "part": null},
+        {"op_code": "RFN-LSIDE", "description": "Refinish left side and blend", "operation": "refinish", "labor_type": "refinish", "labor_hours": 7.8, "part": null}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 15900, "salvage_estimate": 3900, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24841": {
+      "assessment": {
+        "assessment_id": "DA-55041",
+        "photos_analyzed": 11,
+        "photo_quality": "good",
+        "impact_point": "right side, doors",
+        "overall_severity": "moderate",
+        "severity_score": 0.47,
+        "confidence": 0.90,
+        "structural_damage": false,
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "right side", "part": "front door, right", "damage_type": "long scrape with shallow dent", "severity": 0.45, "confidence": 0.91},
+          {"area": "right side", "part": "rear door, right", "damage_type": "scrape", "severity": 0.38, "confidence": 0.90},
+          {"area": "right side", "part": "mirror, right", "damage_type": "housing broken, indicator lamp cracked", "severity": 0.75, "confidence": 0.94}
+        ],
+        "areas_without_new_damage": ["front", "rear", "left side"],
+        "safety_systems_affected": ["Blind spot indicator in right mirror"],
+        "pre_existing_damage_indicators": [],
+        "notes": "Damage pattern consistent with a sideswipe against a taller vehicle."
+      },
+      "operations": [
+        {"op_code": "RFD-RPR", "description": "Front door, right - repair", "operation": "repair", "labor_type": "body", "labor_hours": 3.5, "part": null},
+        {"op_code": "RRD-RPR", "description": "Rear door, right - repair", "operation": "repair", "labor_type": "body", "labor_hours": 2.8, "part": null},
+        {"op_code": "RMR-RPL", "description": "Mirror assembly with blind spot indicator, right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 0.5, "part": {"part_number": "SYN-MP-68237422", "description": "Mirror RH with BSM indicator", "oem_price": 612, "aftermarket_price": 280, "availability": "ships from national DC", "lead_days": 3}},
+        {"op_code": "RFN-RSIDE", "description": "Refinish right side doors and blend", "operation": "refinish", "labor_type": "refinish", "labor_hours": 6.0, "part": null},
+        {"op_code": "BSM-CAL", "description": "Blind spot monitor - function check and calibration", "operation": "calibrate", "labor_type": "diagnostic", "labor_hours": 1.0, "part": null, "required_reason": "Required after mirror assembly with BSM indicator is replaced."}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 22400, "salvage_estimate": 5600, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24846": {
+      "assessment": {
+        "assessment_id": "DA-55046",
+        "photos_analyzed": 18,
+        "photo_quality": "good",
+        "impact_point": "right side, B-pillar",
+        "overall_severity": "severe",
+        "severity_score": 0.81,
+        "confidence": 0.87,
+        "structural_damage": true,
+        "structural_notes": "B-pillar intrusion approximately 9 cm; right rocker deformed.",
+        "airbags_deployed": true,
+        "drivable": false,
+        "fluid_leak": false,
+        "hidden_damage_risk": "high",
+        "damage_areas": [
+          {"area": "right side", "part": "front door, right", "damage_type": "crushed", "severity": 0.85, "confidence": 0.93},
+          {"area": "right side", "part": "rear door, right", "damage_type": "crushed", "severity": 0.80, "confidence": 0.92},
+          {"area": "right side", "part": "B-pillar, right", "damage_type": "intrusion", "severity": 0.86, "confidence": 0.81},
+          {"area": "right side", "part": "rocker panel, right", "damage_type": "deformed", "severity": 0.55, "confidence": 0.77},
+          {"area": "interior", "part": "side curtain airbag, right", "damage_type": "deployed", "severity": 1.0, "confidence": 0.99},
+          {"area": "interior", "part": "seat belt pretensioner, right front", "damage_type": "fired", "severity": 1.0, "confidence": 0.83}
+        ],
+        "areas_without_new_damage": ["front", "rear", "left side"],
+        "safety_systems_affected": ["Side curtain airbag (deployed)", "Right front seat belt pretensioner (fired)"],
+        "pre_existing_damage_indicators": [],
+        "notes": "Occupant compartment intrusion on the passenger side is consistent with the reported passenger injury."
+      },
+      "operations": [
+        {"op_code": "RFD-RPL", "description": "Front door shell, right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 3.4, "part": {"part_number": "SYN-H-76004-AA000", "description": "Front door shell RH", "oem_price": 980, "aftermarket_price": 440, "availability": "in stock", "lead_days": 3}},
+        {"op_code": "RRD-RPL", "description": "Rear door shell, right - replace", "operation": "replace", "labor_type": "body", "labor_hours": 3.1, "part": {"part_number": "SYN-H-77004-AA000", "description": "Rear door shell RH", "oem_price": 910, "aftermarket_price": 410, "availability": "in stock", "lead_days": 3}},
+        {"op_code": "RBPL-RPL", "description": "B-pillar, right - section and replace", "operation": "replace", "labor_type": "frame", "labor_hours": 9.5, "part": {"part_number": "SYN-H-71402-AA000", "description": "B-pillar outer/inner RH", "oem_price": 540, "aftermarket_price": null, "availability": "ships from national DC", "lead_days": 5}},
+        {"op_code": "RRK-RPR", "description": "Rocker panel, right - repair", "operation": "repair", "labor_type": "body", "labor_hours": 4.0, "part": null},
+        {"op_code": "SCA-RPL", "description": "Side curtain airbag, right - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 2.0, "part": {"part_number": "SYN-H-85020-AA000", "description": "Curtain airbag RH", "oem_price": 1150, "aftermarket_price": null, "availability": "ships from national DC", "lead_days": 4}},
+        {"op_code": "SBP-RPL", "description": "Seat belt pretensioner, right front - replace", "operation": "replace", "labor_type": "mechanical", "labor_hours": 0.8, "part": {"part_number": "SYN-H-88880-AA000", "description": "Pretensioner RF", "oem_price": 385, "aftermarket_price": null, "availability": "ships from national DC", "lead_days": 4}, "required_reason": "Pretensioner fired; must be replaced."},
+        {"op_code": "RFN-RSIDE", "description": "Refinish right side and blend", "operation": "refinish", "labor_type": "refinish", "labor_hours": 7.0, "part": null},
+        {"op_code": "SCAN-PP", "description": "Pre- and post-repair diagnostic scan", "operation": "diagnose", "labor_type": "diagnostic", "labor_hours": 1.0, "part": null, "required_reason": "Required after SRS deployment."}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 17200, "salvage_estimate": 4300, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24852": {
+      "assessment": {
+        "assessment_id": "DA-55052",
+        "photos_analyzed": 16,
+        "photo_quality": "good",
+        "impact_point": "roof, hood, liftgate (hail)",
+        "overall_severity": "moderate",
+        "severity_score": 0.41,
+        "confidence": 0.93,
+        "structural_damage": false,
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "roof", "part": "roof panel", "damage_type": "31 hail dents, 10-28 mm, no paint break", "severity": 0.45, "confidence": 0.94},
+          {"area": "front", "part": "hood", "damage_type": "11 hail dents, no paint break", "severity": 0.35, "confidence": 0.93},
+          {"area": "rear", "part": "liftgate", "damage_type": "5 hail dents, no paint break", "severity": 0.25, "confidence": 0.92}
+        ],
+        "areas_without_new_damage": ["glass", "side panels"],
+        "safety_systems_affected": [],
+        "pre_existing_damage_indicators": [],
+        "notes": "All dents within paintless dent repair limits (no paint break, under 30 mm)."
+      },
+      "operations": [
+        {"op_code": "ROOF-PDR", "description": "Roof - paintless dent repair", "operation": "pdr", "labor_type": "pdr", "labor_hours": 9.0, "part": null},
+        {"op_code": "HOOD-PDR", "description": "Hood - paintless dent repair", "operation": "pdr", "labor_type": "pdr", "labor_hours": 3.5, "part": null},
+        {"op_code": "LIFT-PDR", "description": "Liftgate - paintless dent repair", "operation": "pdr", "labor_type": "pdr", "labor_hours": 1.5, "part": null},
+        {"op_code": "HDLN-RI", "description": "Headliner - remove and install for roof access", "operation": "r_and_i", "labor_type": "body", "labor_hours": 2.0, "part": null}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 29800, "salvage_estimate": 7700, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    },
+    "CLM-24858": {
+      "assessment": {
+        "assessment_id": "DA-55058",
+        "photos_analyzed": 5,
+        "photo_quality": "good",
+        "impact_point": "rear center",
+        "overall_severity": "minor",
+        "severity_score": 0.24,
+        "confidence": 0.94,
+        "structural_damage": false,
+        "airbags_deployed": false,
+        "drivable": true,
+        "fluid_leak": false,
+        "hidden_damage_risk": "low",
+        "damage_areas": [
+          {"area": "rear", "part": "rear bumper cover", "damage_type": "cracked, scuffed", "severity": 0.40, "confidence": 0.95}
+        ],
+        "areas_without_new_damage": ["trunk lid", "tail lamps", "quarter panels"],
+        "safety_systems_affected": [],
+        "pre_existing_damage_indicators": ["Faded clear coat on trunk lid (age related)"],
+        "notes": "Low-speed impact."
+      },
+      "operations": [
+        {"op_code": "RBC-RPL", "description": "Rear bumper cover - replace", "operation": "replace", "labor_type": "body", "labor_hours": 2.2, "part": {"part_number": "SYN-AM-TO1100290", "description": "Rear bumper cover", "oem_price": 312, "aftermarket_price": 168, "availability": "in stock", "lead_days": 1}},
+        {"op_code": "RFN-RBC", "description": "Refinish rear bumper cover", "operation": "refinish", "labor_type": "refinish", "labor_hours": 2.6, "part": null}
+      ],
+      "allowed_misc_op_codes": [],
+      "valuation": {"acv": 4100, "salvage_estimate": 700, "source": "Synthetic valuation (comparable vehicles, mileage-adjusted)"}
+    }
+  }
+}

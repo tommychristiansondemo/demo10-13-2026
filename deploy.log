@@ -1,0 +1,576 @@
+
+[1m== Step 0: activate Claude 5.x models (account-level; idempotent)[0m
+[1mRegion us-east-1 · account 154833006816[0m
+  [32m✓[0m Anthropic use-case form is on file for this account
+
+[1mActivating 7 Claude 5.x model(s)[0m
+  [32m✓[0m anthropic.claude-opus-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-haiku-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-opus-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5-1: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+
+[1mWaiting for agreements (up to 5 min)[0m
+
+[1mLive Converse check[0m
+  [31m✗[0m us.anthropic.claude-opus-5-5: AccessDeniedException: anthropic.claude-opus-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+  [31m✗[0m us.anthropic.claude-fable-5: AccessDeniedException: anthropic.claude-fable-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS
+  [31m✗[0m us.anthropic.claude-haiku-5-5: AccessDeniedException: anthropic.claude-haiku-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-opus-5: AccessDeniedException: anthropic.claude-opus-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS 
+  [31m✗[0m us.anthropic.claude-fable-5-1: AccessDeniedException: anthropic.claude-fable-5-1 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-sonnet-5-5: AccessDeniedException: anthropic.claude-sonnet-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact 
+  [31m✗[0m us.anthropic.claude-sonnet-5: AccessDeniedException: anthropic.claude-sonnet-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+
+0/7 Claude 5.x models answer live calls.
+  [33m![0m not every Claude 5.x model is usable yet; the app uses modelId=us.anthropic.claude-sonnet-4-6
+
+[1m== Unit + protocol tests[0m
+.................                                                        [100%]
+=============================== warnings summary ===============================
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_unknown_claim_is_tool_error
+  /usr/lib/python3.12/contextlib.py:105: DeprecationWarning: Use `streamable_http_client` instead.
+    self.gen = func(*args, **kwds)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 5 warnings in 2.96s
+  [32m✓[0m orchestrator tests passed
+
+[1m== Build web app[0m
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 25 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.15 kB │ gzip:  0.61 kB
+dist/assets/index-C5k0grqS.css   14.94 kB │ gzip:  3.86 kB
+dist/assets/index-BonE0sc4.js   258.85 kB │ gzip: 79.67 kB │ map: 1,145.30 kB
+
+✓ built in 325ms
+  [32m✓[0m web/dist built
+
+[1m== CDK bootstrap (ClaimsWb-CDKToolkit, qualifier claimswb)[0m
+AI agent detected
+ ⏳  Bootstrapping environment aws://154833006816/us-east-1...
+Trusted accounts for deployment: (none)
+Trusted accounts for lookup: (none)
+Using default execution policy of 'arn:aws:iam::aws:policy/AdministratorAccess'. Pass '--cloudformation-execution-policies' to customize.
+ClaimsWb-CDKToolkit: creating CloudFormation changeset...
+✅  Environment aws://154833006816/us-east-1 bootstrapped.
+
+[1m== Deploy stacks[0m
+AI agent detected
+Bundling asset ClaimsWb-Api/Api/Code/Stage...
+
+  ...27229ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js  1.1mb ⚠️
+  ...9ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js.map  1.8mb
+
+⚡ Done in 95ms
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/claims_policy_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/damage_repair_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+✨  Synthesis time: 5.74s
+
+ClaimsWb-Foundation: start: Building Api/Code
+ClaimsWb-Foundation: success: Built Api/Code
+ClaimsWb-Foundation: start: Building ClaimsWb-Web/Custom::S3AutoDeleteObjectsCustomResourceProvider Code
+ClaimsWb-Foundation: success: Built ClaimsWb-Web/Custom::S3AutoDeleteObjectsCustomResourceProvider Code
+ClaimsWb-Foundation: start: Building DeploySite/AwsCliLayer/Code
+ClaimsWb-Foundation: success: Built DeploySite/AwsCliLayer/Code
+ClaimsWb-Foundation: start: Building Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code
+ClaimsWb-Foundation: success: Built Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code
+ClaimsWb-Foundation: start: Building DeploySite/Asset1
+ClaimsWb-Foundation: success: Built DeploySite/Asset1
+ClaimsWb-Foundation: start: Building DeploySite/Asset2
+ClaimsWb-Foundation: success: Built DeploySite/Asset2
+ClaimsWb-Foundation: start: Building ClaimsWb-Foundation Template
+ClaimsWb-Foundation: success: Built ClaimsWb-Foundation Template
+ClaimsWb-Foundation: start: Building claims_policy_mcp/AgentRuntimeArtifact
+ClaimsWb-Foundation: start: Publishing Api/Code (154833006816-us-east-1-09c64586)
+ClaimsWb-Foundation: start: Publishing ClaimsWb-Web/Custom::S3AutoDeleteObjectsCustomResourceProvider Code (154833006816-us-east-1-5680b943)
+ClaimsWb-Foundation: start: Publishing DeploySite/AwsCliLayer/Code (154833006816-us-east-1-3476572c)
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset1 (154833006816-us-east-1-a17c1cd1)
+ClaimsWb-Foundation: start: Publishing DeploySite/Asset2 (154833006816-us-east-1-3767dc92)
+ClaimsWb-Foundation: start: Publishing ClaimsWb-Foundation Template (154833006816-us-east-1-3e66bdfe)
+ClaimsWb-Foundation: start: Publishing Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code (154833006816-us-east-1-c8be5858)
+ClaimsWb-Foundation: success: Published Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code (154833006816-us-east-1-c8be5858)
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 681B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 74B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM public.ecr.aws/docker/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d
+#4 resolve public.ecr.aws/docker/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 49.10kB done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt .
+#7 CACHED
+
+#8 [5/7] COPY tools.py server.py ./
+#8 CACHED
+
+#9 [6/7] COPY data ./data
+#9 CACHED
+
+#10 [4/7] RUN pip install -r requirements.txt
+#10 CACHED
+
+#11 [7/7] RUN useradd --uid 1000 --create-home mcp
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:3d82770c14adceda0cc40e06d34acea9239e83a1e96a7b78d4e8333a8cc2a579 done
+#12 exporting config sha256:3fba4db52a4c4e587c54c173753847a1509812bcc2fb5887639d5c453aad6caa done
+#12 naming to docker.io/library/cdkasset-56ecf3cb3a3bd5c885b0d89939eff3f5c133dd54bc33623e8ddde7d37dc15fca:latest done
+#12 DONE 0.0s
+ClaimsWb-Foundation: success: Published DeploySite/Asset2 (154833006816-us-east-1-3767dc92)
+ClaimsWb-Foundation: success: Built claims_policy_mcp/AgentRuntimeArtifact
+ClaimsWb-Foundation: start: Publishing claims_policy_mcp/AgentRuntimeArtifact (154833006816-us-east-1-71756218)
+ClaimsWb-Foundation: start: Building damage_repair_mcp/AgentRuntimeArtifact
+The push refers to repository [154833006816.dkr.ecr.us-east-1.amazonaws.com/cdk-claimswb-container-assets-154833006816-us-east-1]
+ClaimsWb-Foundation: success: Published ClaimsWb-Web/Custom::S3AutoDeleteObjectsCustomResourceProvider Code (154833006816-us-east-1-5680b943)
+ClaimsWb-Foundation: success: Published ClaimsWb-Foundation Template (154833006816-us-east-1-3e66bdfe)
+aadd712613b6: Waiting
+11df369fdc2a: Waiting
+b02499fe49aa: Waiting
+50a64a4cd155: Waiting
+7487c0cb4312: Waiting
+c3627b0cfb3a: Waiting
+84e5c11a0002: Waiting
+2130224a6e93: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+ClaimsWb-Foundation: success: Published DeploySite/Asset1 (154833006816-us-east-1-a17c1cd1)
+50a64a4cd155: Waiting
+7487c0cb4312: Waiting
+c3627b0cfb3a: Waiting
+84e5c11a0002: Waiting
+2130224a6e93: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+11df369fdc2a: Waiting
+b02499fe49aa: Waiting
+11df369fdc2a: Waiting
+b02499fe49aa: Waiting
+50a64a4cd155: Waiting
+7487c0cb4312: Waiting
+c3627b0cfb3a: Waiting
+84e5c11a0002: Waiting
+2130224a6e93: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 681B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 74B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM public.ecr.aws/docker/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d
+#4 resolve public.ecr.aws/docker/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 40.23kB done
+#5 DONE 0.0s
+
+#6 [5/7] COPY tools.py server.py ./
+#6 CACHED
+
+#7 [6/7] COPY data ./data
+#7 CACHED
+
+#8 [3/7] COPY requirements.txt .
+#8 CACHED
+
+#9 [2/7] WORKDIR /app
+#9 CACHED
+
+#10 [4/7] RUN pip install -r requirements.txt
+#10 CACHED
+
+#11 [7/7] RUN useradd --uid 1000 --create-home mcp
+50a64a4cd155: Waiting
+7487c0cb4312: Waiting
+c3627b0cfb3a: Waiting
+84e5c11a0002: Waiting
+2130224a6e93: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+11df369fdc2a: Waiting
+b02499fe49aa: Waiting
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:107ec095f0ed8c6238e52696ce192f902cacd5cb05c33da8ecb0599ce9118ed7 done
+#12 exporting config sha256:a9ff9ed8ee49005e5c7c17b87bf8fb749e50f671cfc263e90e019a536505cf6e done
+#12 naming to docker.io/library/cdkasset-b7278b368903174d6dc1f16d3fa337e2e387a5dc12eb123c381bec1c2cd27cd8:latest done
+#12 DONE 0.0s
+ClaimsWb-Foundation: success: Built damage_repair_mcp/AgentRuntimeArtifact
+ClaimsWb-Foundation: start: Publishing damage_repair_mcp/AgentRuntimeArtifact (154833006816-us-east-1-7f3c954c)
+7487c0cb4312: Waiting
+84e5c11a0002: Waiting
+aadd712613b6: Waiting
+ClaimsWb-McpRuntimes: start: Building ClaimsWb-McpRuntimes Template
+ClaimsWb-McpRuntimes: success: Built ClaimsWb-McpRuntimes Template
+ClaimsWb-Api: start: Building ClaimsWb-Api Template
+ClaimsWb-Api: success: Built ClaimsWb-Api Template
+ClaimsWb-Web: start: Building ClaimsWb-Web Template
+ClaimsWb-Web: success: Built ClaimsWb-Web Template
+ClaimsWb-Observability: start: Building ClaimsWb-Observability Template
+ClaimsWb-Observability: success: Built ClaimsWb-Observability Template
+The push refers to repository [154833006816.dkr.ecr.us-east-1.amazonaws.com/cdk-claimswb-container-assets-154833006816-us-east-1]
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+11df369fdc2a: Pushed
+b02499fe49aa: Pushed
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+7487c0cb4312: Pushed
+c3627b0cfb3a: Pushed
+aadd712613b6: Pushed
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+2130224a6e93: Pushed
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+aadd712613b6: Waiting
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+11df369fdc2a: Layer already exists
+50a64a4cd155: Waiting
+aadd712613b6: Layer already exists
+84e5c11a0002: Waiting
+0cb4f09f44a2: Waiting
+50a64a4cd155: Waiting
+03d3d2a85c57: Waiting
+db8e3a46a1c5: Waiting
+7487c0cb4312: Layer already exists
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+50a64a4cd155: Waiting
+bd52add1124e: Waiting
+bd36565c0fde: Waiting
+0cb4f09f44a2: Waiting
+db8e3a46a1c5: Pushed
+0cb4f09f44a2: Pushed
+ClaimsWb-Foundation: success: Published Api/Code (154833006816-us-east-1-09c64586)
+03d3d2a85c57: Pushed
+bd52add1124e: Pushed
+bd52add1124e: Pushed
+ClaimsWb-Foundation: success: Published DeploySite/AwsCliLayer/Code (154833006816-us-east-1-3476572c)
+50a64a4cd155: Pushed
+50a64a4cd155: Pushed
+bd36565c0fde: Pushed
+84e5c11a0002: Pushed
+b7278b368903174d6dc1f16d3fa337e2e387a5dc12eb123c381bec1c2cd27cd8: digest: sha256:107ec095f0ed8c6238e52696ce192f902cacd5cb05c33da8ecb0599ce9118ed7 size: 2266
+ClaimsWb-Foundation: success: Published damage_repair_mcp/AgentRuntimeArtifact (154833006816-us-east-1-7f3c954c)
+84e5c11a0002: Pushed
+bd36565c0fde: Pushed
+56ecf3cb3a3bd5c885b0d89939eff3f5c133dd54bc33623e8ddde7d37dc15fca: digest: sha256:3d82770c14adceda0cc40e06d34acea9239e83a1e96a7b78d4e8333a8cc2a579 size: 2266
+ClaimsWb-Foundation: success: Published claims_policy_mcp/AgentRuntimeArtifact (154833006816-us-east-1-71756218)
+ClaimsWb-Foundation
+ClaimsWb-Foundation: creating CloudFormation changeset...
+ClaimsWb-Foundation: deploying... [1/5]
+
+✅  ClaimsWb-Foundation
+
+✨  Deployment time: 33.57s
+
+Outputs:
+ClaimsWb-Foundation.CognitoDomainUrl = https://claims-workbench-154833006816.auth.us-east-1.amazoncognito.com
+ClaimsWb-Foundation.ExportsOutputFnGetAttDataKey17AFBB84ArnCE2A1BC6 = arn:aws:kms:us-east-1:154833006816:key/c36a41e0-1616-4194-8a55-e0eb17b2c357
+ClaimsWb-Foundation.ExportsOutputFnGetAttRunsE45A2291Arn9AFA3150 = arn:aws:dynamodb:us-east-1:154833006816:table/claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputRefRunsE45A229154DE1E8E = claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputRefUsers0A0EEA89A1309EA5 = us-east-1_MDRwvpMeS
+ClaimsWb-Foundation.ExportsOutputRefUsersDomainC663232474DE62C1 = claims-workbench-154833006816
+ClaimsWb-Foundation.ExportsOutputRefUsersWebClient8EE36D427F5C395C = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.RunsTableName = claims-workbench-runs
+ClaimsWb-Foundation.UserPoolClientId = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.UserPoolId = us-east-1_MDRwvpMeS
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Foundation/efaeae80-c736-11f1-a71e-0affff84d99f
+ClaimsWb-McpRuntimes: start: Publishing ClaimsWb-McpRuntimes Template (154833006816-us-east-1-9e17a28b)
+ClaimsWb-McpRuntimes: success: Published ClaimsWb-McpRuntimes Template (154833006816-us-east-1-9e17a28b)
+ClaimsWb-McpRuntimes
+ClaimsWb-McpRuntimes: creating CloudFormation changeset...
+ClaimsWb-McpRuntimes: deploying... [2/5]
+
+✅  ClaimsWb-McpRuntimes
+
+✨  Deployment time: 59.7s
+
+Outputs:
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeArn0FFBF475 = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeId0D720B92 = claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeArnBEE564CB = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeIdC38589E6 = damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.claimspolicymcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.damagerepairmcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-McpRuntimes/09408cb0-c737-11f1-8062-0ef131302bd7
+ClaimsWb-Api: start: Publishing ClaimsWb-Api Template (154833006816-us-east-1-ba05820e)
+ClaimsWb-Api: success: Published ClaimsWb-Api Template (154833006816-us-east-1-ba05820e)
+ClaimsWb-Api
+ClaimsWb-Api: creating CloudFormation changeset...
+ClaimsWb-Api: deploying... [3/5]
+
+✅  ClaimsWb-Api
+
+✨  Deployment time: 55.51s
+
+Outputs:
+ClaimsWb-Api.ApiFunctionName = claims-workbench-api
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionArn7019A171 = arn:aws:lambda:us-east-1:154833006816:function:claims-workbench-api
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionUrl9002A90E = https://ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws/
+ClaimsWb-Api.ExportsOutputRefApiF70053CD5653BA4D = claims-workbench-api
+ClaimsWb-Api.ExportsOutputRefApiLogs3D05D88BC2694364 = /aws/lambda/claims-workbench-api
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Api/3507fa40-c737-11f1-8805-12ffde131361
+ClaimsWb-Web: start: Publishing ClaimsWb-Web Template (154833006816-us-east-1-82a7988d)
+ClaimsWb-Observability: start: Publishing ClaimsWb-Observability Template (154833006816-us-east-1-dcbdeaf2)
+ClaimsWb-Web: success: Published ClaimsWb-Web Template (154833006816-us-east-1-82a7988d)
+ClaimsWb-Web
+ClaimsWb-Observability: success: Published ClaimsWb-Observability Template (154833006816-us-east-1-dcbdeaf2)
+ClaimsWb-Web: creating CloudFormation changeset...
+ClaimsWb-Web: deploying... [4/5]
+
+✅  ClaimsWb-Web
+
+✨  Deployment time: 394.08s
+
+Outputs:
+ClaimsWb-Web.DistributionDomain = d3g1g42qckvran.cloudfront.net
+ClaimsWb-Web.DistributionId = E2XMD0Z1LRKVO5
+ClaimsWb-Web.SiteUrl = https://www.awsteach.com
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Web/5b3429f0-c737-11f1-ac77-0effd0cd1d67
+ClaimsWb-Observability
+ClaimsWb-Observability: creating CloudFormation changeset...
+ClaimsWb-Observability: deploying... [5/5]
+
+✅  ClaimsWb-Observability
+
+✨  Deployment time: 12.58s
+
+Outputs:
+ClaimsWb-Observability.DashboardUrl = https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/claims-workbench
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Observability/4a380f80-c738-11f1-b8d9-12ffcef433f1
+
+✨  Total time: 738.5s
+
+
+[1m== Demo users[0m
+  ✓ claims.analyst (claims-analysts)  password in Secrets Manager claims-workbench/demo-users/claims.analyst
+  ✓ claims.supervisor (claims-supervisors)  password in Secrets Manager claims-workbench/demo-users/claims.supervisor
+
+[1m== Smoke test (deployed)[0m
+Smoke test against https://www.awsteach.com
+  ✓ site serves the SPA over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ runtime config.json published
+  ✓ API health through CloudFront
+  ✓ unauthenticated API call rejected with JSON 401
+  ✓ Function URL not callable directly (IAM / OAC only)
+Traceback (most recent call last):
+  File "/home/tommy/demo/scripts/smoke_test.py", line 55, in <module>
+    analyst, supervisor = token("claims.analyst"), token("claims.supervisor")
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tommy/demo/scripts/smoke_test_auth.py", line 12, in token
+    r = boto3.client("cognito-idp").initiate_auth(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tommy/demo/.venv/lib/python3.12/site-packages/botocore/client.py", line 606, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tommy/demo/.venv/lib/python3.12/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tommy/demo/.venv/lib/python3.12/site-packages/botocore/client.py", line 1094, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidParameterException: An error occurred (InvalidParameterException) when calling the InitiateAuth operation: USER_PASSWORD_AUTH flow not enabled for this client
+deploy exit=1

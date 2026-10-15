@@ -1,0 +1,24 @@
+{
+  "app": "npx tsx infra/app.ts",
+  "watch": {
+    "include": [
+      "infra/**"
+    ]
+  },
+  "context": {
+    "@aws-cdk/core:bootstrapQualifier": "claimswb",
+    "workbench": {
+      "account": "154833006816",
+      "region": "us-east-1",
+      "hostedZoneName": "awsteach.com",
+      "hostedZoneId": "",
+      "siteHostname": "www.awsteach.com",
+      "insightsHostname": "insights.awsteach.com",
+      "modelId": "us.anthropic.claude-sonnet-4-6",
+      "alarmEmail": "",
+      "selfSignUp": true,
+      "localDevCallbackUrl": ""
+    },
+    "@aws-cdk/core:defaultCrossStackReferences": "strong"
+  }
+}

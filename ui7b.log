@@ -1,0 +1,17 @@
+  ✓ supervisor signs in through Cognito managed login
+  ✓ work queue lists 8 claims
+  ✓ CLM-24817 claim file assembled from 6 MCP calls
+  ✓ live analysis streams tool calls and a recommendation
+  ✓ trace shows both MCP servers
+  ✓ grounding: all citations valid
+  ✓ citation chip opens the evidence
+  ✓ student registers as a SUPERVISOR (6-char password, no email)
+  ✓ self-registered supervisor approves the plan
+  ✓ MCP servers page enumerates 5 + 5 tools from the runtimes
+  ✗ Model routing: 8 ranked LLMs, linked sliders always total 100%, live preview: Locator expected to be visible
+  ✓ student registers as an ANALYST (phone viewport)
+  ✓ analyst sees the approved decision, cannot approve, no horizontal scroll
+  ✓ Model routing page works on a phone (no horizontal scroll)
+  ✓ no uncaught page errors
+
+14/15 UI checks passed; screenshots in /home/tommy/demo/test-results

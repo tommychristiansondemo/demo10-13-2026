@@ -1,0 +1,1846 @@
+{
+  "measuredAt": "2026-10-14T14:16:54.995Z",
+  "claims": [
+    "CLM-24817",
+    "CLM-24822",
+    "CLM-24830",
+    "CLM-24835",
+    "CLM-24841",
+    "CLM-24846",
+    "CLM-24852",
+    "CLM-24858"
+  ],
+  "runs": [
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 51643,
+      "usage": {
+        "inputTokens": 25294,
+        "outputTokens": 2205,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 72770,
+      "usage": {
+        "inputTokens": 28245,
+        "outputTokens": 3655,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 77137,
+      "usage": {
+        "inputTokens": 27303,
+        "outputTokens": 3913,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 86644,
+      "usage": {
+        "inputTokens": 29216,
+        "outputTokens": 4268,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 64241,
+      "usage": {
+        "inputTokens": 26561,
+        "outputTokens": 3032,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 65,
+      "durationMs": 41203,
+      "usage": {
+        "inputTokens": 25430,
+        "outputTokens": 2243,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 52594,
+      "usage": {
+        "inputTokens": 24947,
+        "outputTokens": 2729,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 46670,
+      "usage": {
+        "inputTokens": 9584,
+        "outputTokens": 3792,
+        "cacheReadTokens": 11784,
+        "cacheWriteTokens": 3928
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 87710,
+      "usage": {
+        "inputTokens": 14908,
+        "outputTokens": 7340,
+        "cacheReadTokens": 11784,
+        "cacheWriteTokens": 3928
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 89919,
+      "usage": {
+        "inputTokens": 13411,
+        "outputTokens": 7902,
+        "cacheReadTokens": 11784,
+        "cacheWriteTokens": 3928
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 94800,
+      "usage": {
+        "inputTokens": 12227,
+        "outputTokens": 8697,
+        "cacheReadTokens": 11784,
+        "cacheWriteTokens": 3928
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 70140,
+      "usage": {
+        "inputTokens": 11135,
+        "outputTokens": 5449,
+        "cacheReadTokens": 14764,
+        "cacheWriteTokens": 948
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 45563,
+      "usage": {
+        "inputTokens": 10192,
+        "outputTokens": 4337,
+        "cacheReadTokens": 14764,
+        "cacheWriteTokens": 948
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 73341,
+      "usage": {
+        "inputTokens": 10764,
+        "outputTokens": 6531,
+        "cacheReadTokens": 14764,
+        "cacheWriteTokens": 948
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 32730,
+      "usage": {
+        "inputTokens": 18784,
+        "outputTokens": 1845,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 40085,
+      "usage": {
+        "inputTokens": 21088,
+        "outputTokens": 2947,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 44155,
+      "usage": {
+        "inputTokens": 19985,
+        "outputTokens": 3361,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 17,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 82,
+      "durationMs": 49413,
+      "usage": {
+        "inputTokens": 21725,
+        "outputTokens": 3602,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [
+        "\"next_actions\" was not a list."
+      ]
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 31057,
+      "usage": {
+        "inputTokens": 19481,
+        "outputTokens": 2644,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 29683,
+      "usage": {
+        "inputTokens": 18945,
+        "outputTokens": 1974,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 32498,
+      "usage": {
+        "inputTokens": 18475,
+        "outputTokens": 2079,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 27276,
+      "usage": {
+        "inputTokens": 21193,
+        "outputTokens": 1469,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 55,
+      "durationMs": 27429,
+      "usage": {
+        "inputTokens": 19780,
+        "outputTokens": 1388,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24830",
+      "completed": false,
+      "dispositionCorrect": false,
+      "points": {
+        "completed": 0,
+        "disposition": 0,
+        "grounding": 0,
+        "numbers": 0,
+        "scenario": 0
+      },
+      "quality": 0,
+      "durationMs": 27474,
+      "usage": {
+        "inputTokens": 26351,
+        "outputTokens": 1069,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "error": "Model ended without calling submit_recommendation"
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24817",
+      "completed": false,
+      "dispositionCorrect": false,
+      "points": {
+        "completed": 0,
+        "disposition": 0,
+        "grounding": 0,
+        "numbers": 0,
+        "scenario": 0
+      },
+      "quality": 0,
+      "durationMs": 28922,
+      "usage": {
+        "inputTokens": 31475,
+        "outputTokens": 1276,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "error": "Model ended without calling submit_recommendation"
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 65,
+      "durationMs": 19964,
+      "usage": {
+        "inputTokens": 18044,
+        "outputTokens": 1120,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 23057,
+      "usage": {
+        "inputTokens": 18491,
+        "outputTokens": 1042,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "COVERAGE_REVIEW",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 0,
+        "scenario": 10
+      },
+      "quality": 90,
+      "durationMs": 35312,
+      "usage": {
+        "inputTokens": 18823,
+        "outputTokens": 1282,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [
+        "1 tool call(s) failed."
+      ]
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 65,
+      "durationMs": 21493,
+      "usage": {
+        "inputTokens": 18448,
+        "outputTokens": 1105,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 24648,
+      "usage": {
+        "inputTokens": 43388,
+        "outputTokens": 871,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 25310,
+      "usage": {
+        "inputTokens": 39310,
+        "outputTokens": 1253,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 5,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 90,
+      "durationMs": 26049,
+      "usage": {
+        "inputTokens": 40173,
+        "outputTokens": 1466,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 5,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "COVERAGE_REVIEW",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 18449,
+      "usage": {
+        "inputTokens": 17917,
+        "outputTokens": 1082,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 17949,
+      "usage": {
+        "inputTokens": 17372,
+        "outputTokens": 855,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 17321,
+      "usage": {
+        "inputTokens": 16892,
+        "outputTokens": 867,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 0,
+        "scenario": 10
+      },
+      "quality": 90,
+      "durationMs": 19109,
+      "usage": {
+        "inputTokens": 18149,
+        "outputTokens": 1035,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 20101,
+      "usage": {
+        "inputTokens": 23723,
+        "outputTokens": 1185,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 15,
+        "numbers": 0,
+        "scenario": 10
+      },
+      "quality": 50,
+      "durationMs": 20998,
+      "usage": {
+        "inputTokens": 17510,
+        "outputTokens": 1084,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [
+        "Removed citations to unknown evidence: E7"
+      ]
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 24773,
+      "usage": {
+        "inputTokens": 27924,
+        "outputTokens": 1779,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24841",
+      "completed": false,
+      "dispositionCorrect": false,
+      "points": {
+        "completed": 0,
+        "disposition": 0,
+        "grounding": 0,
+        "numbers": 0,
+        "scenario": 0
+      },
+      "quality": 0,
+      "durationMs": 10583,
+      "usage": {
+        "inputTokens": 24931,
+        "outputTokens": 1798,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "error": "Model ended without calling submit_recommendation"
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24852",
+      "completed": false,
+      "dispositionCorrect": false,
+      "points": {
+        "completed": 0,
+        "disposition": 0,
+        "grounding": 0,
+        "numbers": 0,
+        "scenario": 0
+      },
+      "quality": 0,
+      "durationMs": 19198,
+      "usage": {
+        "inputTokens": 23907,
+        "outputTokens": 1184,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "error": "Model ended without calling submit_recommendation"
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 0,
+        "scenario": 10
+      },
+      "quality": 90,
+      "durationMs": 15855,
+      "usage": {
+        "inputTokens": 16351,
+        "outputTokens": 636,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 65,
+      "durationMs": 25871,
+      "usage": {
+        "inputTokens": 29888,
+        "outputTokens": 2171,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 15,
+        "numbers": 0,
+        "scenario": 10
+      },
+      "quality": 85,
+      "durationMs": 27820,
+      "usage": {
+        "inputTokens": 32684,
+        "outputTokens": 1553,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": [
+        "Removed citations to unknown evidence: E7"
+      ]
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 30780,
+      "usage": {
+        "inputTokens": 37373,
+        "outputTokens": 2594,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 9,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 90,
+      "durationMs": 37899,
+      "usage": {
+        "inputTokens": 34603,
+        "outputTokens": 2787,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 12580,
+      "usage": {
+        "inputTokens": 29912,
+        "outputTokens": 2293,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 26517,
+      "usage": {
+        "inputTokens": 31322,
+        "outputTokens": 1870,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 26379,
+      "usage": {
+        "inputTokens": 30150,
+        "outputTokens": 1645,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 8,
+      "warnings": []
+    },
+    {
+      "model": "claude-opus-4-6",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 61594,
+      "usage": {
+        "inputTokens": 27739,
+        "outputTokens": 3361,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 81577,
+      "usage": {
+        "inputTokens": 12153,
+        "outputTokens": 8356,
+        "cacheReadTokens": 15712,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": []
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 33946,
+      "usage": {
+        "inputTokens": 20657,
+        "outputTokens": 3443,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-pro",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 55,
+      "durationMs": 16332,
+      "usage": {
+        "inputTokens": 20653,
+        "outputTokens": 1375,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": []
+    },
+    {
+      "model": "nova-2-lite",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 90,
+      "durationMs": 13939,
+      "usage": {
+        "inputTokens": 37264,
+        "outputTokens": 1412,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 5,
+      "warnings": []
+    },
+    {
+      "model": "llama4-maverick",
+      "claimId": "CLM-24846",
+      "completed": false,
+      "dispositionCorrect": false,
+      "points": {
+        "completed": 0,
+        "disposition": 0,
+        "grounding": 0,
+        "numbers": 0,
+        "scenario": 0
+      },
+      "quality": 0,
+      "durationMs": 10083,
+      "usage": {
+        "inputTokens": 17979,
+        "outputTokens": 1289,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "error": "Model ended without calling submit_recommendation"
+    },
+    {
+      "model": "gpt-oss-120b",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 0
+      },
+      "quality": 90,
+      "durationMs": 23271,
+      "usage": {
+        "inputTokens": 40451,
+        "outputTokens": 2935,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 9,
+      "warnings": []
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 53305,
+      "usage": {
+        "inputTokens": 21340,
+        "outputTokens": 2070,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "additionalDispositions": [
+        "APPROVE_REPAIR_WITH_ADJUSTMENTS"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 56622,
+      "usage": {
+        "inputTokens": 17067,
+        "outputTokens": 2698,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "additionalDispositions": [
+        "COVERAGE_REVIEW"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 69476,
+      "usage": {
+        "inputTokens": 18103,
+        "outputTokens": 2894,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "SUBROGATION"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 90821,
+      "usage": {
+        "inputTokens": 18948,
+        "outputTokens": 3372,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "additionalDispositions": [
+        "COVERAGE_REVIEW"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 60360,
+      "usage": {
+        "inputTokens": 22519,
+        "outputTokens": 2564,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "additionalDispositions": [
+        "COVERAGE_REVIEW"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 52477,
+      "usage": {
+        "inputTokens": 23321,
+        "outputTokens": 2703,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY",
+        "SUBROGATION"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 88309,
+      "usage": {
+        "inputTokens": 17921,
+        "outputTokens": 3147,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 348667,
+      "usage": {
+        "inputTokens": 21052,
+        "outputTokens": 2011,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24830",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 35505,
+      "usage": {
+        "inputTokens": 22260,
+        "outputTokens": 1578,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24817",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 41432,
+      "usage": {
+        "inputTokens": 19414,
+        "outputTokens": 2240,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 3,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24835",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "SIU_REFERRAL",
+      "additionalDispositions": [
+        "COVERAGE_REVIEW",
+        "DENY_FIRST_PARTY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 53333,
+      "usage": {
+        "inputTokens": 23729,
+        "outputTokens": 1988,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24822",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "TOTAL_LOSS_EVALUATION",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 63324,
+      "usage": {
+        "inputTokens": 33976,
+        "outputTokens": 2171,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 5,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24841",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "additionalDispositions": [
+        "COVERAGE_REVIEW"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 57391,
+      "usage": {
+        "inputTokens": 23183,
+        "outputTokens": 1814,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24858",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "DENY_FIRST_PARTY",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 31244,
+      "usage": {
+        "inputTokens": 22004,
+        "outputTokens": 1393,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24846",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR_WITH_ADJUSTMENTS",
+      "additionalDispositions": [
+        "ESCALATE_INJURY"
+      ],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 54358,
+      "usage": {
+        "inputTokens": 24501,
+        "outputTokens": 1911,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "deepseek-v3-2",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": true,
+      "disposition": "APPROVE_REPAIR",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 35,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 100,
+      "durationMs": 48356,
+      "usage": {
+        "inputTokens": 22445,
+        "outputTokens": 1552,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:04.863Z"
+    },
+    {
+      "model": "minimax-m2-5",
+      "claimId": "CLM-24852",
+      "completed": true,
+      "dispositionCorrect": false,
+      "disposition": "FAST_TRACK_PAYMENT",
+      "additionalDispositions": [],
+      "points": {
+        "completed": 25,
+        "disposition": 0,
+        "grounding": 20,
+        "numbers": 10,
+        "scenario": 10
+      },
+      "quality": 65,
+      "durationMs": 34464,
+      "usage": {
+        "inputTokens": 21302,
+        "outputTokens": 1783,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0
+      },
+      "turns": 4,
+      "warnings": [],
+      "measuredAt": "2026-10-14T16:47:56.331Z"
+    }
+  ],
+  "note": "CLM-24846 re-run after the grader accepted ESCALATE_INJURY as an additional disposition (prompt: damage handling continues in parallel). | 2026-10-14 afternoon: added minimax-m2-5 and deepseek-v3-2 (8 claims each, same agent/grader, KB tool off like the original runs). minimax-m2-5 CLM-24852 took 349 s once (correct) and was re-run (35 s, wrong disposition); both runs are kept, so it has 9 runs."
+}

@@ -1,0 +1,61 @@
+{
+  "ClaimsWb-Foundation": {
+    "UserPoolClientId": "641fqbkmk8lv7brfpqsuegmn3s",
+    "ExportsOutputFnGetAttRunsE45A2291Arn9AFA3150": "arn:aws:dynamodb:us-east-1:154833006816:table/claims-workbench-runs",
+    "RunsTableName": "claims-workbench-runs",
+    "UserPoolId": "us-east-1_MDRwvpMeS",
+    "ExportsOutputFnGetAttUsers0A0EEA89Arn6658B146": "arn:aws:cognito-idp:us-east-1:154833006816:userpool/us-east-1_MDRwvpMeS",
+    "ExportsOutputRefUsersWebClient8EE36D427F5C395C": "641fqbkmk8lv7brfpqsuegmn3s",
+    "ExportsOutputRefUsersDomainC663232474DE62C1": "claims-workbench-154833006816",
+    "ExportsOutputRefUsers0A0EEA89A1309EA5": "us-east-1_MDRwvpMeS",
+    "CognitoDomainUrl": "https://claims-workbench-154833006816.auth.us-east-1.amazoncognito.com",
+    "ExportsOutputFnGetAttDataKey17AFBB84ArnCE2A1BC6": "arn:aws:kms:us-east-1:154833006816:key/c36a41e0-1616-4194-8a55-e0eb17b2c357",
+    "ExportsOutputRefRunsE45A229154DE1E8E": "claims-workbench-runs"
+  },
+  "ClaimsWb-McpRuntimes": {
+    "claimspolicymcpArn": "arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R",
+    "damagerepairmcpArn": "arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f",
+    "ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeId0D720B92": "claims_policy_mcp-IwUEtD845R",
+    "ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeIdC38589E6": "damage_repair_mcp-OH4Y7qG45f",
+    "ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeArn0FFBF475": "arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R",
+    "ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeArnBEE564CB": "arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f"
+  },
+  "ClaimsWb-KnowledgeBase": {
+    "KnowledgeBaseId": "1TFNIYDSMJ",
+    "VectorIndexArn": "arn:aws:s3vectors:us-east-1:154833006816:bucket/claims-wb-kb-154833006816/index/claims-manual",
+    "ExportsOutputFnGetAttKnowledgeBaseKnowledgeBaseArn47097C46": "arn:aws:bedrock:us-east-1:154833006816:knowledge-base/1TFNIYDSMJ",
+    "ExportsOutputFnGetAttKnowledgeBaseKnowledgeBaseIdFC83E473": "1TFNIYDSMJ",
+    "DataSourceId": "A5E6WXKXPP",
+    "ManualBucket": "claimswb-knowledgebase-manualdocs04a6d91f-bwujvmlodufe"
+  },
+  "ClaimsWb-Api": {
+    "ExportsOutputRefApiF70053CD5653BA4D": "claims-workbench-api",
+    "ExportsOutputRefModelRoutingEnvE9BA4CDF": "p2zy6bq",
+    "ExportsOutputRefSelectionProfile353CAD01": "f31b15v",
+    "ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionArn7019A171": "arn:aws:lambda:us-east-1:154833006816:function:claims-workbench-api",
+    "ExportsOutputRefApiLogs3D05D88BC2694364": "/aws/lambda/claims-workbench-api",
+    "ExportsOutputRefModelRoutingAppE67E38C4": "pze22m0",
+    "AppConfigSelectionProfileId": "f31b15v",
+    "ApiFunctionName": "claims-workbench-api",
+    "AppConfigEnvironmentId": "p2zy6bq",
+    "ExportsOutputRefCatalogProfile39C06FDA": "a84sb2b",
+    "AppConfigCatalogProfileId": "a84sb2b",
+    "AppConfigApplicationId": "pze22m0",
+    "ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionUrl9002A90E": "https://ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws/"
+  },
+  "ClaimsWb-Web": {
+    "DistributionDomain": "d3g1g42qckvran.cloudfront.net",
+    "DistributionId": "E2XMD0Z1LRKVO5",
+    "SiteUrl": "https://www.awsteach.com"
+  },
+  "ClaimsWb-Observability": {
+    "DashboardUrl": "https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/claims-workbench"
+  },
+  "ClaimsInsights": {
+    "KnowledgeObject": "s3://claims-insights-knowledge-154833006816/projectknowledge.md",
+    "InsightsUserPoolClientId": "5d0hu06bn8m8ursjgs4gaqjc1m",
+    "InsightsUrl": "https://insights.awsteach.com",
+    "KnowledgeBucket": "claims-insights-knowledge-154833006816",
+    "InsightsDistributionId": "EMCPCEXLW3DHQ"
+  }
+}

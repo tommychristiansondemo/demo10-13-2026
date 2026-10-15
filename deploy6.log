@@ -1,0 +1,421 @@
+
+[1m== Step 0: activate Claude 5.x models (account-level; idempotent)[0m
+[1mRegion us-east-1 · account 154833006816[0m
+  [32m✓[0m Anthropic use-case form is on file for this account
+
+[1mActivating 7 Claude 5.x model(s)[0m
+  [32m✓[0m anthropic.claude-opus-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-haiku-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-opus-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-fable-5-1: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+  [32m✓[0m anthropic.claude-sonnet-5: agreement=AVAILABLE authorization=AUTHORIZED entitlement=AVAILABLE region=AVAILABLE
+
+[1mWaiting for agreements (up to 5 min)[0m
+
+[1mLive Converse check[0m
+  [31m✗[0m us.anthropic.claude-opus-5-5: AccessDeniedException: anthropic.claude-opus-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+  [31m✗[0m us.anthropic.claude-fable-5: AccessDeniedException: anthropic.claude-fable-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS
+  [31m✗[0m us.anthropic.claude-haiku-5-5: AccessDeniedException: anthropic.claude-haiku-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-opus-5: AccessDeniedException: anthropic.claude-opus-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AWS 
+  [31m✗[0m us.anthropic.claude-fable-5-1: AccessDeniedException: anthropic.claude-fable-5-1 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact A
+  [31m✗[0m us.anthropic.claude-sonnet-5-5: AccessDeniedException: anthropic.claude-sonnet-5-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact 
+  [31m✗[0m us.anthropic.claude-sonnet-5: AccessDeniedException: anthropic.claude-sonnet-5 is not available for this account. You can explore other available models on Amazon Bedrock. For additional access options, contact AW
+
+0/7 Claude 5.x models answer live calls.
+  [33m![0m not every Claude 5.x model is usable yet; the app uses modelId=us.anthropic.claude-sonnet-4-6
+
+[1m== AWS credentials (source, identity, expiry)[0m
+  [32m✓[0m credentials_check.py passed
+
+[1m== AWS identity[0m
+  [32m✓[0m account 154833006816 as arn:aws:iam::154833006816:user/demo
+  [32m✓[0m region us-east-1
+
+[1m== Local tooling[0m
+  [32m✓[0m node v24.18.0
+  [32m✓[0m npm 11.16.0
+  [32m✓[0m docker Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+  [32m✓[0m python venv Python 3.12.3
+  [32m✓[0m docker can build/run linux/arm64 (AgentCore Runtime requirement)
+
+[1m== DNS: www.awsteach.com in zone awsteach.com[0m
+  [32m✓[0m hosted zone Z02882605B7GUS0L3VHX
+  [32m✓[0m existing records belong to ClaimsWb-Web
+  [32m✓[0m insights.awsteach.com is free or owned by ClaimsInsights
+  [32m✓[0m public NS resolves (ns-190.awsdns-23.com.)
+
+[1m== Amazon Bedrock model access[0m
+  ✓ configured model us.anthropic.claude-sonnet-4-6: tool_use
+  - newer candidate us.anthropic.claude-fable-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-fable-5 is not available for this account. Y
+  - newer candidate us.anthropic.claude-fable-5-1: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-fable-5-1 is not available for this account.
+  - newer candidate us.anthropic.claude-haiku-4-5-20251001-v1:0: tool_use
+  - newer candidate us.anthropic.claude-haiku-5-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-haiku-5-5 is not available for this account.
+  - newer candidate us.anthropic.claude-opus-4-5-20251101-v1:0: tool_use
+  - newer candidate us.anthropic.claude-opus-4-7: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-opus-4-7 is not available for this account. 
+  - newer candidate us.anthropic.claude-opus-4-8: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-opus-4-8 is not available for this account. 
+  - newer candidate us.anthropic.claude-opus-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-opus-5 is not available for this account. Yo
+  - newer candidate us.anthropic.claude-opus-5-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-opus-5-5 is not available for this account. 
+  - newer candidate us.anthropic.claude-sonnet-4-5-20250929-v1:0: tool_use
+  - newer candidate us.anthropic.claude-sonnet-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-sonnet-5 is not available for this account. 
+  - newer candidate us.anthropic.claude-sonnet-5-5: ERROR AccessDeniedException: An error occurred (AccessDeniedException) when calling the Converse operation: anthropic.claude-sonnet-5-5 is not available for this account
+
+[1m== Amazon Bedrock AgentCore[0m
+  [32m✓[0m AgentCore control plane reachable; existing runtimes: 2
+  - X-Ray resource policies in account: 2 (quota 5; this app adds 1)
+
+[1m== Existing stacks[0m
+  - ClaimsWb-CDKToolkit: CREATE_COMPLETE
+  - ClaimsWb-Foundation: UPDATE_COMPLETE
+  - ClaimsWb-McpRuntimes: CREATE_COMPLETE
+  - ClaimsWb-KnowledgeBase: CREATE_COMPLETE
+  - ClaimsWb-Api: UPDATE_COMPLETE
+  - ClaimsWb-Web: UPDATE_COMPLETE
+  - ClaimsWb-Observability: UPDATE_COMPLETE
+  - ClaimsInsights: UPDATE_COMPLETE
+
+  [32m✓[0m preflight passed
+
+[1m== Unit + protocol tests[0m
+.................                                                        [100%]
+=============================== warnings summary ===============================
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_tool_lists
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_cross_server_reconcile
+mcp_servers/tests/test_mcp_protocol.py::test_unknown_claim_is_tool_error
+  /usr/lib/python3.12/contextlib.py:105: DeprecationWarning: Use `streamable_http_client` instead.
+    self.gen = func(*args, **kwds)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 5 warnings in 2.95s
+  [32m✓[0m orchestrator tests passed
+
+[1m== Build web apps[0m
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 27 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.15 kB │ gzip:  0.61 kB
+dist/assets/index-D32er4uh.css   19.57 kB │ gzip:  4.73 kB
+dist/assets/index-Cy5rNZHy.js   274.25 kB │ gzip: 84.16 kB │ map: 1,192.71 kB
+
+✓ built in 330ms
+  [32m✓[0m web/dist built (Claims Workbench)
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 27 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.88 kB │ gzip:   0.52 kB
+dist/assets/index-BD9dGjtd.css   10.96 kB │ gzip:   3.07 kB
+dist/assets/index-DO3VkASu.js   324.14 kB │ gzip: 100.90 kB │ map: 1,393.36 kB
+
+✓ built in 346ms
+  [32m✓[0m insights-web/dist built (Class Insights)
+
+[1m== CDK bootstrap (ClaimsWb-CDKToolkit, qualifier claimswb)[0m
+  [32m✓[0m already bootstrapped
+
+[1m== Deploy stacks[0m
+AI agent detected
+Bundling asset ClaimsWb-Foundation/SignupTrigger/Code/Stage...
+
+  ...99e444ac9878f028cba41f9854be131b20ab5601913009e5-building/index.js  2.1kb
+
+⚡ Done in 5ms
+[WARNING] aws-cdk-lib.CfnResource#addDependency is deprecated.
+  Use `addResourceDependency` instead.
+  This API will be removed in the next major release.
+[WARNING] aws-cdk-lib.CfnResource#addDependency is deprecated.
+  Use `addResourceDependency` instead.
+  This API will be removed in the next major release.
+Bundling asset ClaimsWb-Api/Api/Code/Stage...
+
+  ...27229ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js  1.1mb ⚠️
+  ...9ef383f34307f05f4f10598fe7ad175991e2e47155-building/index.js.map  1.9mb
+
+⚡ Done in 98ms
+Bundling asset ClaimsInsights/InsightsApi/Code/Stage...
+
+  ...c24dbd691c93a7f1c976a55ba0fc083e2c9f0667ed86bf-building/index.js   79.2kb
+  ...bd691c93a7f1c976a55ba0fc083e2c9f0667ed86bf-building/index.js.map  165.8kb
+
+⚡ Done in 12ms
+Bundling asset ClaimsInsights/InsightsChat/Code/Stage...
+
+  ...a4be2ebfd675476a9674f763a17138fc5a24776741eba1-building/index.js   96.6kb
+  ...2ebfd675476a9674f763a17138fc5a24776741eba1-building/index.js.map  194.4kb
+
+⚡ Done in 13ms
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/claims_policy_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+INFO Container URI validation skipped as it contains unresolved CDK tokens. The URI will be validated at deployment time. (Construct Annotations)
+   ClaimsWb-McpRuntimes/damage_repair_mcp
+   Acknowledge with 'Annotation::info-annotation'
+
+✨  Synthesis time: 8.69s
+
+ClaimsWb-Foundation: start: Building UploadManual/Asset1
+ClaimsWb-Foundation: success: Built UploadManual/Asset1
+ClaimsWb-KnowledgeBase: start: Building ClaimsWb-KnowledgeBase Template
+ClaimsWb-KnowledgeBase: success: Built ClaimsWb-KnowledgeBase Template
+ClaimsWb-Foundation: start: Publishing UploadManual/Asset1 (154833006816-us-east-1-725a241c)
+ClaimsWb-Foundation: success: Published UploadManual/Asset1 (154833006816-us-east-1-725a241c)
+ClaimsWb-Foundation
+ClaimsWb-Foundation: deploying... [1/7]
+
+✅  ClaimsWb-Foundation (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-Foundation.CognitoDomainUrl = https://claims-workbench-154833006816.auth.us-east-1.amazoncognito.com
+ClaimsWb-Foundation.ExportsOutputFnGetAttDataKey17AFBB84ArnCE2A1BC6 = arn:aws:kms:us-east-1:154833006816:key/c36a41e0-1616-4194-8a55-e0eb17b2c357
+ClaimsWb-Foundation.ExportsOutputFnGetAttRunsE45A2291Arn9AFA3150 = arn:aws:dynamodb:us-east-1:154833006816:table/claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputFnGetAttUsers0A0EEA89Arn6658B146 = arn:aws:cognito-idp:us-east-1:154833006816:userpool/us-east-1_MDRwvpMeS
+ClaimsWb-Foundation.ExportsOutputRefRunsE45A229154DE1E8E = claims-workbench-runs
+ClaimsWb-Foundation.ExportsOutputRefUsers0A0EEA89A1309EA5 = us-east-1_MDRwvpMeS
+ClaimsWb-Foundation.ExportsOutputRefUsersDomainC663232474DE62C1 = claims-workbench-154833006816
+ClaimsWb-Foundation.ExportsOutputRefUsersWebClient8EE36D427F5C395C = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.RunsTableName = claims-workbench-runs
+ClaimsWb-Foundation.UserPoolClientId = 641fqbkmk8lv7brfpqsuegmn3s
+ClaimsWb-Foundation.UserPoolId = us-east-1_MDRwvpMeS
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Foundation/efaeae80-c736-11f1-a71e-0affff84d99f
+ClaimsWb-McpRuntimes
+ClaimsWb-McpRuntimes: deploying... [2/7]
+
+✅  ClaimsWb-McpRuntimes (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeArn0FFBF475 = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttclaimspolicymcp3BC9ABE3AgentRuntimeId0D720B92 = claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeArnBEE564CB = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.ExportsOutputFnGetAttdamagerepairmcp3CD0EE91AgentRuntimeIdC38589E6 = damage_repair_mcp-OH4Y7qG45f
+ClaimsWb-McpRuntimes.claimspolicymcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/claims_policy_mcp-IwUEtD845R
+ClaimsWb-McpRuntimes.damagerepairmcpArn = arn:aws:bedrock-agentcore:us-east-1:154833006816:runtime/damage_repair_mcp-OH4Y7qG45f
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-McpRuntimes/09408cb0-c737-11f1-8062-0ef131302bd7
+ClaimsWb-KnowledgeBase: start: Publishing ClaimsWb-KnowledgeBase Template (154833006816-us-east-1-2e2ac6b8)
+ClaimsWb-KnowledgeBase: success: Published ClaimsWb-KnowledgeBase Template (154833006816-us-east-1-2e2ac6b8)
+ClaimsWb-KnowledgeBase
+ClaimsWb-KnowledgeBase: creating CloudFormation changeset...
+ClaimsWb-KnowledgeBase: deploying... [3/7]
+
+✅  ClaimsWb-KnowledgeBase
+
+✨  Deployment time: 49.39s
+
+Outputs:
+ClaimsWb-KnowledgeBase.DataSourceId = A5E6WXKXPP
+ClaimsWb-KnowledgeBase.ExportsOutputFnGetAttKnowledgeBaseKnowledgeBaseArn47097C46 = arn:aws:bedrock:us-east-1:154833006816:knowledge-base/1TFNIYDSMJ
+ClaimsWb-KnowledgeBase.ExportsOutputFnGetAttKnowledgeBaseKnowledgeBaseIdFC83E473 = 1TFNIYDSMJ
+ClaimsWb-KnowledgeBase.KnowledgeBaseId = 1TFNIYDSMJ
+ClaimsWb-KnowledgeBase.ManualBucket = claimswb-knowledgebase-manualdocs04a6d91f-bwujvmlodufe
+ClaimsWb-KnowledgeBase.VectorIndexArn = arn:aws:s3vectors:us-east-1:154833006816:bucket/claims-wb-kb-154833006816/index/claims-manual
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-KnowledgeBase/fdd6a070-c7dc-11f1-a8c2-0affecfb5f95
+ClaimsWb-Api
+ClaimsWb-Api: deploying... [4/7]
+
+✅  ClaimsWb-Api (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-Api.ApiFunctionName = claims-workbench-api
+ClaimsWb-Api.AppConfigApplicationId = pze22m0
+ClaimsWb-Api.AppConfigCatalogProfileId = a84sb2b
+ClaimsWb-Api.AppConfigEnvironmentId = p2zy6bq
+ClaimsWb-Api.AppConfigSelectionProfileId = f31b15v
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionArn7019A171 = arn:aws:lambda:us-east-1:154833006816:function:claims-workbench-api
+ClaimsWb-Api.ExportsOutputFnGetAttApiFunctionUrl46E4ABDEFunctionUrl9002A90E = https://ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws/
+ClaimsWb-Api.ExportsOutputRefApiF70053CD5653BA4D = claims-workbench-api
+ClaimsWb-Api.ExportsOutputRefApiLogs3D05D88BC2694364 = /aws/lambda/claims-workbench-api
+ClaimsWb-Api.ExportsOutputRefCatalogProfile39C06FDA = a84sb2b
+ClaimsWb-Api.ExportsOutputRefModelRoutingAppE67E38C4 = pze22m0
+ClaimsWb-Api.ExportsOutputRefModelRoutingEnvE9BA4CDF = p2zy6bq
+ClaimsWb-Api.ExportsOutputRefSelectionProfile353CAD01 = f31b15v
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Api/3507fa40-c737-11f1-8805-12ffde131361
+ClaimsWb-Web
+ClaimsWb-Web: deploying... [5/7]
+
+✅  ClaimsWb-Web (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-Web.DistributionDomain = d3g1g42qckvran.cloudfront.net
+ClaimsWb-Web.DistributionId = E2XMD0Z1LRKVO5
+ClaimsWb-Web.SiteUrl = https://www.awsteach.com
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Web/5b3429f0-c737-11f1-ac77-0effd0cd1d67
+ClaimsWb-Observability
+ClaimsWb-Observability: deploying... [6/7]
+
+✅  ClaimsWb-Observability (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsWb-Observability.DashboardUrl = https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/claims-workbench
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsWb-Observability/4a380f80-c738-11f1-b8d9-12ffcef433f1
+ClaimsInsights
+ClaimsInsights: deploying... [7/7]
+
+✅  ClaimsInsights (no changes)
+
+✨  Deployment time: 0s
+
+Outputs:
+ClaimsInsights.InsightsDistributionId = EMCPCEXLW3DHQ
+ClaimsInsights.InsightsUrl = https://insights.awsteach.com
+ClaimsInsights.InsightsUserPoolClientId = 5d0hu06bn8m8ursjgs4gaqjc1m
+ClaimsInsights.KnowledgeBucket = claims-insights-knowledge-154833006816
+ClaimsInsights.KnowledgeObject = s3://claims-insights-knowledge-154833006816/projectknowledge.md
+Stack ARN:
+arn:aws:cloudformation:us-east-1:154833006816:stack/ClaimsInsights/9a15f5b0-c744-11f1-aba3-0afff7a1daaf
+
+✨  Total time: 85.77s
+
+
+[1m== Demo users[0m
+  ✓ claims.analyst (claims-analysts)  password in Secrets Manager claims-workbench/demo-users/claims.analyst
+  ✓ claims.supervisor (claims-supervisors)  password in Secrets Manager claims-workbench/demo-users/claims.supervisor
+
+[1m== Bedrock Knowledge Base ingestion (claims-handling manual)[0m
+  ingestion LOOWHHFRZO: COMPLETE - scanned 29, new 29, modified 0, deleted 0, failed 0
+  retrieve test: 3 passages, top score 0.723 from CHM-503.md
+  ✓ Knowledge Base ingested and answering (CHM-503 retrieved for a manipulation-attempt query)
+
+[1m== Smoke test (deployed)[0m
+Smoke test against https://www.awsteach.com
+  ✓ site serves the SPA over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ runtime config.json published
+  ✓ API health through CloudFront
+  ✓ unauthenticated API call rejected with JSON 401
+  ✓ Function URL not callable directly (IAM / OAC only)
+  ✓ analyst token verified, groups mapped
+  ✓ supervisor token verified
+  ✓ self sign-up as analyst: 6-char password, no email, auto-confirmed, correct group
+  ✓ self sign-up as supervisor: 6-char password, no email, auto-confirmed, correct group
+  ✓ unknown user type rejected at sign-up
+  ✓ queue: 8 claims via claims_policy.list_claims (1.8s)
+  ✓ claim detail: 6 tool calls across both MCP servers
+  ✓ tools/list on both runtimes: 5 + 5 tools
+  ✓ API uses the two deployed runtime ARNs
+  ✓ analysis stream opened
+  ✓ analysis completed in 74s
+  ✓ agent used both MCP servers (10 tool calls)
+  ✓ agent searched the Bedrock Knowledge Base (3 searches) and cited the manual
+  ✓ agent passed the estimate across the MCP boundary (reconcile_estimate)
+  ✓ no invalid citations
+    disposition=APPROVE_REPAIR_WITH_ADJUSTMENTS confidence=HIGH usage={'inputTokens': 16047, 'outputTokens': 7402, 'cacheReadTokens': 12828, 'cacheWriteTokens': 4276}
+    headline: Approve repair at Northgate Collision Center with adjustments — remove two unsupported front-end lines ($364 pre-tax), add required BSI sensor calibration and pre/post diagnostic scans ($375 pre-tax, net +$11); open subrogation against Granite Ridge Auto Insurance and advise insured of deductible-waiver endorsement.
+  ✓ demo claim disposition is APPROVE_REPAIR_WITH_ADJUSTMENTS
+  ✓ demo claim includes a subrogation action
+  ✓ analyst cannot approve (403)
+  ✓ supervisor approves (200)
+  ✓ second decision rejected (409, first decision wins)
+  ✓ run persisted in DynamoDB
+  ✓ model catalog (5 LLMs) and ranking served from AppConfig
+  ✓ configured weights sum to 100 (quality 50 / cost 25 / latency 25)
+    live model: claude-sonnet-4-6; ranking: 1. claude-haiku-4-5 64, 2. nova-2-lite 56.1, 3. claude-sonnet-4-6 52.6, 4. gpt-oss-120b 45.1, 5. claude-opus-4-6 27.9
+  ✓ weights that do not sum to 100 are rejected (400)
+  ✓ cost 100% routes live traffic to OpenAI gpt-oss-120b via an AppConfig deployment (0.6s)
+  ✓ every API instance now reports the new model
+  ✓ analysis ran on OpenAI gpt-oss-120b without a redeploy ($0.0068, 17s)
+  ✓ previous selection restored (claude-sonnet-4-6)
+
+35/35 checks passed
+
+[1m== Publish projectknowledge.md (Class Insights knowledge base)[0m
+  ✓ published s3://claims-insights-knowledge-154833006816/projectknowledge.md (49,945 chars, version uQT1GAkO4ooBS.LILtkNIzsjx_gBuDX6): 155 resources, 49 resource types, 20 services
+
+[1m== Class Insights smoke test[0m
+Class Insights smoke test against https://insights.awsteach.com
+  ✓ site serves the SPA from S3 over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ config.json: own Cognito client + link back to the Workbench
+  ✓ insights API health through CloudFront
+  ✓ unauthenticated request rejected (401)
+  ✓ claims-insights-api Function URL not callable directly (OAC only)
+  ✓ claims-insights-chat Function URL not callable directly (OAC only)
+  ✓ Workbench user signs in to Class Insights (shared user pool)
+  ✓ projectknowledge.md served from the knowledge bucket
+  ✓ knowledge file contains the generated live-inventory section
+  ✓ live inventory: 8 stacks, resource types counted
+  ✓ live inventory: both AgentCore runtimes READY
+  ✓ 6 allow-listed log sources
+  ✓ logs explorer finds MCP tool calls in the Workbench API log
+  ✓ non-allow-listed log source refused (400)
+  ✓ Workbench reasoning log: llm_prompt with the full system prompt
+  ✓ Workbench reasoning log: llm_call lines carry the model's extended-thinking text
+  ✓ metrics endpoint
+  ✓ model routing from AppConfig: active model + ranking of 5 LLMs
+  ✓ live inventory includes the Workbench's current LLM
+  ✓ live inventory: Bedrock Knowledge Base ACTIVE on S3 Vectors, last ingestion COMPLETE
+  ✓ every LLM call is priced (68 calls, $1.6943 in 24 h)
+  ✓ calls carry the cost logged at call time; per-model totals
+  ✓ Cost Explorer summary (month to date $78.43, LLM $52.69)
+  ✓ chat stream opened
+  ✓ chat completed
+  ✓ chat streamed the model's reasoning
+  ✓ chat used the live inventory tool
+  ✓ answer names the model and the live resource-type count
+  ✓ chatbot's own reasoning is in the reasoning log
+  ✓ chatbot logs the cost of each of its own calls
+  ✓ no credentials or tokens in any response
+
+33/33 Class Insights checks passed
+
+[1m== Workstation independence[0m
+[1mAPI + orchestrator (Lambda)[0m
+  [32m✓[0m no local/tunnel addresses in environment
+  [32m✓[0m no AWS access keys in environment (runs on its IAM role)
+  [32m✓[0m LOCAL_DEV bypass is off
+  [32m✓[0m MCP endpoints are AgentCore runtime ARNs, not URLs
+  [32m✓[0m execution role is an IAM role in this account  (ClaimsWb-Api-ApiServiceRole1BD550DA-Qo6YKWEt0kiQ)
+
+[1mMCP servers (AgentCore Runtime)[0m
+  [32m✓[0m claims_policy: READY, image hosted in ECR in this account  (READY, cdk-claimswb-container-assets-1548330068)
+  [32m✓[0m damage_repair: READY, image hosted in ECR in this account  (READY, cdk-claimswb-container-assets-1548330068)
+
+[1mBedrock Knowledge Base[0m
+  [32m✓[0m KB is ACTIVE, documents in S3 and vectors in S3 Vectors in this account  (S3_VECTORS)
+  [32m✓[0m API Lambda knows the KB id (retrieval runs on its IAM role)
+
+[1mEdge (CloudFront, DNS, Cognito)[0m
+  [32m✓[0m CloudFront origins are only S3 and the Lambda Function URL  (ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws, claimswb-web-sitee53d7754-0obbjqqfuzzq.s3.us-east-1.amazonaws.com)
+  [32m✓[0m www.awsteach.com resolves publicly  (143.204.130.102, 143.204.130.36, 143.204.130.7, 143.204.130.83, 2600:9000:21c4:2)
+  [32m✓[0m Cognito sign-in returns only to the public HTTPS site  (https://www.awsteach.com/)
+
+[1mWhat the browser downloads[0m
+  [32m✓[0m config.json has no local-dev flag or local URLs
+  [32m✓[0m JavaScript bundle never calls a local address  (1 bundle(s))
+  [32m✓[0m public /api/health answers through CloudFront -> Lambda  ({"ok": true, "modelId": "us.anthropic.claude-sonnet-4-6"})
+
+[1mClass Insights[0m
+  [32m✓[0m Insights CloudFront origins are only S3 and Lambda Function URLs  (43754v4qfcjo6zncyb25ozmn2e0eujey.lambda-url.us-east-1.on.aws, ejnjsrtrtd7mxhciemyg4rbavm0klepj.lambda-url.us-east-1.on.aws, claimsinsights-sitee53d7754-v7gorvvojdp4.s3.us-east-1.amazonaws.com)
+  [32m✓[0m claims-insights-api: no local addresses or keys in environment
+  [32m✓[0m claims-insights-chat: no local addresses or keys in environment
+  [32m✓[0m Insights config.json has no local URLs
+  [32m✓[0m public Insights /api/insights/health answers through CloudFront -> Lambda
+
+20/20 independence checks passed
+Nothing deployed depends on this workstation. Final proof: shut it down and open the site from a phone.
+
+[1m== Done: https://www.awsteach.com and https://insights.awsteach.com[0m
+deploy exit=0

@@ -1,0 +1,244 @@
+{
+  "version": 202610141648,
+  "description": "8 Amazon Bedrock LLMs the Claims Workbench agent can be routed to. Quality = mean score on an automatically graded benchmark of the real task (8 synthetic claims; completion 25, correct disposition 35, grounding 20, exact numbers 10, scenario must-have 10). Latency = mean seconds per full analysis (all model turns + MCP tool calls). Cost = mean USD per analysis from measured token usage x AWS list prices.",
+  "models": [
+    {
+      "key": "claude-opus-4-6",
+      "name": "Claude Opus 4.6",
+      "provider": "Anthropic",
+      "modelId": "us.anthropic.claude-opus-4-6-v1",
+      "foundationModel": "anthropic.claude-opus-4-6-v1",
+      "strengths": "Deepest reasoning and most careful tool use; best at subtle cases (fraud signals, coverage disputes).",
+      "tradeoffs": "Highest price per token and among the slowest candidates.",
+      "invocation": {
+        "reasoning": "adaptive",
+        "promptCache": true,
+        "maxTokens": 16000
+      },
+      "pricing": {
+        "inputPerMTok": 5.5,
+        "outputPerMTok": 27.5,
+        "cacheReadPerMTok": 0.55,
+        "cacheWritePerMTok": 6.875,
+        "source": "AWS Price List API, AmazonBedrockFoundationModels, 'Claude Opus 4.6', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 95.6,
+        "avgLatencySec": 63.5,
+        "avgCostUsd": 0.23496,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 7,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "modelId": "us.anthropic.claude-sonnet-4-6",
+      "foundationModel": "anthropic.claude-sonnet-4-6",
+      "strengths": "Near-Opus quality on agentic tool use at about 60% of the price; the app's original model.",
+      "tradeoffs": "Adaptive thinking makes each analysis take a minute or more.",
+      "invocation": {
+        "reasoning": "adaptive",
+        "promptCache": true,
+        "maxTokens": 16000
+      },
+      "pricing": {
+        "inputPerMTok": 3.3,
+        "outputPerMTok": 16.5,
+        "cacheReadPerMTok": 0.33,
+        "cacheWritePerMTok": 4.125,
+        "source": "AWS Price List API, AmazonBedrockFoundationModels, 'Claude Sonnet 4.6', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 100,
+        "avgLatencySec": 73.7,
+        "avgCostUsd": 0.161,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 8,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "provider": "Anthropic",
+      "modelId": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "foundationModel": "anthropic.claude-haiku-4-5-20251001-v1:0",
+      "strengths": "Fast, inexpensive Claude that still follows long tool schemas well.",
+      "tradeoffs": "Run without extended thinking here, so it can miss multi-signal judgment calls.",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": true,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 1.1,
+        "outputPerMTok": 5.5,
+        "cacheReadPerMTok": 0.11,
+        "cacheWritePerMTok": 1.375,
+        "source": "AWS Price List API, AmazonBedrockFoundationModels, 'Claude Haiku 4.5', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 97.8,
+        "avgLatencySec": 36.7,
+        "avgCostUsd": 0.03693,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 8,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "nova-2-lite",
+      "name": "Amazon Nova 2 Lite",
+      "provider": "Amazon",
+      "modelId": "us.amazon.nova-2-lite-v1:0",
+      "foundationModel": "amazon.nova-2-lite-v1:0",
+      "strengths": "AWS first-party, very low cost and fast; large context window.",
+      "tradeoffs": "Smaller model: weaker on nuanced judgment.",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": false,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 0.33,
+        "outputPerMTok": 2.75,
+        "source": "AWS Price List API, AmazonBedrock, 'Nova 2.0 Lite', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 93.1,
+        "avgLatencySec": 20.6,
+        "avgCostUsd": 0.01258,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 7,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "llama4-maverick",
+      "name": "Llama 4 Maverick 17B",
+      "provider": "Meta",
+      "modelId": "us.meta.llama4-maverick-17b-instruct-v1:0",
+      "foundationModel": "meta.llama4-maverick-17b-instruct-v1:0",
+      "strengths": "Meta's open-weight mixture-of-experts model (17B active of 400B); very cheap and the fastest per call.",
+      "tradeoffs": "Less reliable with large nested tool schemas and long structured outputs.",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": false,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 0.24,
+        "outputPerMTok": 0.97,
+        "source": "AWS Price List API, AmazonBedrock, 'Llama 4 Maverick 17B', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 53.8,
+        "avgLatencySec": 17.6,
+        "avgCostUsd": 0.00633,
+        "runs": 8,
+        "completedRuns": 5,
+        "correctDispositions": 4,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "gpt-oss-120b",
+      "name": "OpenAI gpt-oss-120b",
+      "provider": "OpenAI",
+      "modelId": "openai.gpt-oss-120b-1:0",
+      "foundationModel": "openai.gpt-oss-120b-1:0",
+      "strengths": "Open-weight reasoning model; the lowest price per token and very low latency.",
+      "tradeoffs": "In-region only (no cross-region profile); open-weight models trail Claude on grounding discipline.",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": false,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 0.15,
+        "outputPerMTok": 0.6,
+        "source": "AWS Price List API, AmazonBedrock, 'gpt-oss-120b', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 91.2,
+        "avgLatencySec": 26.4,
+        "avgCostUsd": 0.00633,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 7,
+        "measuredAt": "2026-10-14T14:16:54.995Z"
+      }
+    },
+    {
+      "key": "minimax-m2-5",
+      "name": "MiniMax M2.5",
+      "provider": "MiniMax",
+      "modelId": "minimax.minimax-m2.5",
+      "foundationModel": "minimax.minimax-m2.5",
+      "strengths": "Open-weight agentic/coding model with built-in interleaved reasoning; strong multi-step tool use at a very low price.",
+      "tradeoffs": "In-region only (no cross-region profile); always reasons, so output tokens and latency run higher than other low-cost models.",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": false,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 0.3,
+        "outputPerMTok": 1.2,
+        "source": "AWS Price List API, AmazonBedrock, 'MiniMax M2.5', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 96.1,
+        "avgLatencySec": 94.9,
+        "avgCostUsd": 0.00915,
+        "runs": 9,
+        "completedRuns": 9,
+        "correctDispositions": 8,
+        "measuredAt": "2026-10-14T16:47:56.331Z"
+      }
+    },
+    {
+      "key": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "provider": "DeepSeek",
+      "modelId": "deepseek.v3.2",
+      "foundationModel": "deepseek.v3.2",
+      "strengths": "Open-weight frontier-class MoE model with sparse attention; strong general reasoning at a low price.",
+      "tradeoffs": "In-region only; needs firm instructions to call tools (sometimes leaks its tool-call markup into text).",
+      "invocation": {
+        "reasoning": "off",
+        "promptCache": false,
+        "maxTokens": 8192
+      },
+      "pricing": {
+        "inputPerMTok": 0.62,
+        "outputPerMTok": 1.85,
+        "source": "AWS Price List API, AmazonBedrock, 'DeepSeek v3.2', us-east-1 on-demand",
+        "fetchedAt": "2026-10-14T16:48:10Z"
+      },
+      "benchmark": {
+        "quality": 100,
+        "avgLatencySec": 48.1,
+        "avgCostUsd": 0.01823,
+        "runs": 8,
+        "completedRuns": 8,
+        "correctDispositions": 8,
+        "measuredAt": "2026-10-14T16:47:04.863Z"
+      }
+    }
+  ]
+}

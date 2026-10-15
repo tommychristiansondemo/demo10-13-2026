@@ -1,0 +1,176 @@
+{
+ "_comment": "Models benchmarked by scripts/model_benchmark.py. 'selected' ones become the AppConfig model catalog. All passed a live Converse tool-use probe in this account on 2026-10-14 (MiniMax M2.5 and DeepSeek V3.2 added the same day; DeepSeek R1 rejected: no tool use in Converse). Claude 5.x models are omitted: the account's applied Bedrock quota for them is 0.",
+ "candidates": [
+  {
+   "key": "claude-opus-4-6",
+   "name": "Claude Opus 4.6",
+   "provider": "Anthropic",
+   "modelId": "us.anthropic.claude-opus-4-6-v1",
+   "foundationModel": "anthropic.claude-opus-4-6-v1",
+   "strengths": "Deepest reasoning and most careful tool use; best at subtle cases (fraud signals, coverage disputes).",
+   "tradeoffs": "Highest price per token and among the slowest candidates.",
+   "invocation": {
+    "reasoning": "adaptive",
+    "promptCache": true,
+    "maxTokens": 16000
+   },
+   "price": {
+    "service": "AmazonBedrockFoundationModels",
+    "model": "Claude Opus 4.6"
+   },
+   "selected": true
+  },
+  {
+   "key": "claude-sonnet-4-6",
+   "name": "Claude Sonnet 4.6",
+   "provider": "Anthropic",
+   "modelId": "us.anthropic.claude-sonnet-4-6",
+   "foundationModel": "anthropic.claude-sonnet-4-6",
+   "strengths": "Near-Opus quality on agentic tool use at about 60% of the price; the app's original model.",
+   "tradeoffs": "Adaptive thinking makes each analysis take a minute or more.",
+   "invocation": {
+    "reasoning": "adaptive",
+    "promptCache": true,
+    "maxTokens": 16000
+   },
+   "price": {
+    "service": "AmazonBedrockFoundationModels",
+    "model": "Claude Sonnet 4.6"
+   },
+   "selected": true
+  },
+  {
+   "key": "claude-haiku-4-5",
+   "name": "Claude Haiku 4.5",
+   "provider": "Anthropic",
+   "modelId": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+   "foundationModel": "anthropic.claude-haiku-4-5-20251001-v1:0",
+   "strengths": "Fast, inexpensive Claude that still follows long tool schemas well.",
+   "tradeoffs": "Run without extended thinking here, so it can miss multi-signal judgment calls.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": true,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrockFoundationModels",
+    "model": "Claude Haiku 4.5"
+   },
+   "selected": true
+  },
+  {
+   "key": "nova-pro",
+   "name": "Amazon Nova Pro",
+   "provider": "Amazon",
+   "modelId": "us.amazon.nova-pro-v1:0",
+   "foundationModel": "amazon.nova-pro-v1:0",
+   "strengths": "AWS first-party multimodal model; low price with solid tool use.",
+   "tradeoffs": "Less precise than Claude on long structured outputs.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 5000
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "Nova Pro"
+   },
+   "selected": false
+  },
+  {
+   "key": "nova-2-lite",
+   "name": "Amazon Nova 2 Lite",
+   "provider": "Amazon",
+   "modelId": "us.amazon.nova-2-lite-v1:0",
+   "foundationModel": "amazon.nova-2-lite-v1:0",
+   "strengths": "AWS first-party, very low cost and fast; large context window.",
+   "tradeoffs": "Smaller model: weaker on nuanced judgment.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "Nova 2.0 Lite"
+   },
+   "selected": true
+  },
+  {
+   "key": "llama4-maverick",
+   "name": "Llama 4 Maverick 17B",
+   "provider": "Meta",
+   "modelId": "us.meta.llama4-maverick-17b-instruct-v1:0",
+   "foundationModel": "meta.llama4-maverick-17b-instruct-v1:0",
+   "strengths": "Meta's open-weight mixture-of-experts model (17B active of 400B); very cheap and the fastest per call.",
+   "tradeoffs": "Less reliable with large nested tool schemas and long structured outputs.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "Llama 4 Maverick 17B"
+   },
+   "selected": true
+  },
+  {
+   "key": "gpt-oss-120b",
+   "name": "OpenAI gpt-oss-120b",
+   "provider": "OpenAI",
+   "modelId": "openai.gpt-oss-120b-1:0",
+   "foundationModel": "openai.gpt-oss-120b-1:0",
+   "strengths": "Open-weight reasoning model; the lowest price per token and very low latency.",
+   "tradeoffs": "In-region only (no cross-region profile); open-weight models trail Claude on grounding discipline.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "gpt-oss-120b"
+   },
+   "selected": true
+  },
+  {
+   "key": "minimax-m2-5",
+   "name": "MiniMax M2.5",
+   "provider": "MiniMax",
+   "modelId": "minimax.minimax-m2.5",
+   "foundationModel": "minimax.minimax-m2.5",
+   "strengths": "Open-weight agentic/coding model with built-in interleaved reasoning; strong multi-step tool use at a very low price.",
+   "tradeoffs": "In-region only (no cross-region profile); always reasons, so output tokens and latency run higher than other low-cost models.",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "MiniMax M2.5"
+   },
+   "selected": true
+  },
+  {
+   "key": "deepseek-v3-2",
+   "name": "DeepSeek V3.2",
+   "provider": "DeepSeek",
+   "modelId": "deepseek.v3.2",
+   "foundationModel": "deepseek.v3.2",
+   "strengths": "Open-weight frontier-class MoE model with sparse attention; strong general reasoning at a low price.",
+   "tradeoffs": "In-region only; needs firm instructions to call tools (sometimes leaks its tool-call markup into text).",
+   "invocation": {
+    "reasoning": "off",
+    "promptCache": false,
+    "maxTokens": 8192
+   },
+   "price": {
+    "service": "AmazonBedrock",
+    "model": "DeepSeek v3.2"
+   },
+   "selected": true
+  }
+ ]
+}

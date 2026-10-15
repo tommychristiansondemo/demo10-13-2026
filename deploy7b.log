@@ -1,0 +1,113 @@
+Smoke test against https://www.awsteach.com
+  ✓ site serves the SPA over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ runtime config.json published
+  ✓ API health through CloudFront
+  ✓ unauthenticated API call rejected with JSON 401
+  ✓ Function URL not callable directly (IAM / OAC only)
+  ✓ analyst token verified, groups mapped
+  ✓ supervisor token verified
+  ✓ self sign-up as analyst: 6-char password, no email, auto-confirmed, correct group
+  ✓ self sign-up as supervisor: 6-char password, no email, auto-confirmed, correct group
+  ✓ unknown user type rejected at sign-up
+  ✓ queue: 8 claims via claims_policy.list_claims (1.7s)
+  ✓ claim detail: 6 tool calls across both MCP servers
+  ✓ tools/list on both runtimes: 5 + 5 tools
+  ✓ API uses the two deployed runtime ARNs
+  ✓ analysis stream opened
+  ✓ analysis completed in 100s
+  ✓ agent used both MCP servers (10 tool calls)
+  ✓ agent searched the Bedrock Knowledge Base (3 searches) and cited the manual
+  ✓ agent passed the estimate across the MCP boundary (reconcile_estimate)
+  ✓ no invalid citations
+    disposition=APPROVE_REPAIR_WITH_ADJUSTMENTS confidence=HIGH usage={'inputTokens': 17126, 'outputTokens': 9664, 'cacheReadTokens': 17104, 'cacheWriteTokens': 0}
+    headline: Approve repair with adjustments — remove unsupported front bumper/hood lines ($364 pre-tax), add mandatory ADAS calibration and pre/post scans ($375 pre-tax), and open subrogation against Granite Ridge Auto Insurance for the at-fault driver Derek Sloan.
+  ✓ demo claim disposition is APPROVE_REPAIR_WITH_ADJUSTMENTS
+  ✓ demo claim includes a subrogation action
+  ✓ analyst cannot approve (403)
+  ✓ supervisor approves (200)
+  ✓ second decision rejected (409, first decision wins)
+  ✓ run persisted in DynamoDB
+  ✓ model catalog (8 LLMs) and ranking served from AppConfig
+  ✓ configured weights sum to 100 (quality 100 / cost 0 / latency 0)
+    live model: claude-sonnet-4-6; ranking: 1. claude-sonnet-4-6 100, 2. deepseek-v3-2 100, 3. claude-haiku-4-5 75, 4. minimax-m2-5 55.7, 5. claude-opus-4-6 50, 6. nova-2-lite 21.6, 7. gpt-oss-120b 0, 8. llama4-maverick 0
+  ✓ weights that do not sum to 100 are rejected (400)
+  ✓ cost 100% routes live traffic to OpenAI gpt-oss-120b via an AppConfig deployment (0.5s)
+  ✓ every API instance now reports the new model
+  ✓ analysis ran on OpenAI gpt-oss-120b without a redeploy ($0.0067, 28s)
+  ✓ previous selection restored (claude-sonnet-4-6)
+
+35/35 checks passed
+  ✓ published s3://claims-insights-knowledge-154833006816/projectknowledge.md (53,124 chars, version 3UZhBQI9Gwh7PWtlnXj7ZHnJ5c6K5CA8): 155 resources, 49 resource types, 20 services
+Class Insights smoke test against https://insights.awsteach.com
+  ✓ site serves the SPA from S3 over HTTPS
+  ✓ security headers present
+  ✓ SPA deep link rewritten at the edge
+  ✓ config.json: own Cognito client + link back to the Workbench
+  ✓ insights API health through CloudFront
+  ✓ unauthenticated request rejected (401)
+  ✓ claims-insights-api Function URL not callable directly (OAC only)
+  ✓ claims-insights-chat Function URL not callable directly (OAC only)
+  ✓ Workbench user signs in to Class Insights (shared user pool)
+  ✓ projectknowledge.md served from the knowledge bucket
+  ✓ knowledge file contains the generated live-inventory section
+  ✓ live inventory: 8 stacks, resource types counted
+  ✓ live inventory: both AgentCore runtimes READY
+  ✓ 6 allow-listed log sources
+  ✓ logs explorer finds MCP tool calls in the Workbench API log
+  ✓ non-allow-listed log source refused (400)
+  ✓ Workbench reasoning log: llm_prompt with the full system prompt
+  ✓ Workbench reasoning log: llm_call lines carry the model's extended-thinking text
+  ✓ metrics endpoint
+  ✓ model routing from AppConfig: active model + ranking of 8 LLMs
+  ✓ live inventory includes the Workbench's current LLM
+  ✓ live inventory: Bedrock Knowledge Base ACTIVE on S3 Vectors, last ingestion COMPLETE
+  ✓ every LLM call is priced (106 calls, $2.6279 in 24 h)
+  ✓ calls carry the cost logged at call time; per-model totals
+  ✓ Cost Explorer summary (month to date $78.43, LLM $52.69)
+  ✓ chat stream opened
+  ✓ chat completed
+  ✓ chat streamed the model's reasoning
+  ✓ chat used the live inventory tool
+  ✓ answer names the model and the live resource-type count
+  ✓ chatbot's own reasoning is in the reasoning log
+  ✓ chatbot logs the cost of each of its own calls
+  ✓ no credentials or tokens in any response
+
+33/33 Class Insights checks passed
+[1mAPI + orchestrator (Lambda)[0m
+  [32m✓[0m no local/tunnel addresses in environment
+  [32m✓[0m no AWS access keys in environment (runs on its IAM role)
+  [32m✓[0m LOCAL_DEV bypass is off
+  [32m✓[0m MCP endpoints are AgentCore runtime ARNs, not URLs
+  [32m✓[0m execution role is an IAM role in this account  (ClaimsWb-Api-ApiServiceRole1BD550DA-Qo6YKWEt0kiQ)
+
+[1mMCP servers (AgentCore Runtime)[0m
+  [32m✓[0m claims_policy: READY, image hosted in ECR in this account  (READY, cdk-claimswb-container-assets-1548330068)
+  [32m✓[0m damage_repair: READY, image hosted in ECR in this account  (READY, cdk-claimswb-container-assets-1548330068)
+
+[1mBedrock Knowledge Base[0m
+  [32m✓[0m KB is ACTIVE, documents in S3 and vectors in S3 Vectors in this account  (S3_VECTORS)
+  [32m✓[0m API Lambda knows the KB id (retrieval runs on its IAM role)
+
+[1mEdge (CloudFront, DNS, Cognito)[0m
+  [32m✓[0m CloudFront origins are only S3 and the Lambda Function URL  (ncdedwmltu7ottk5yevd75dk2m0mktuo.lambda-url.us-east-1.on.aws, claimswb-web-sitee53d7754-0obbjqqfuzzq.s3.us-east-1.amazonaws.com)
+  [32m✓[0m www.awsteach.com resolves publicly  (143.204.130.102, 143.204.130.36, 143.204.130.7, 143.204.130.83, 2600:9000:21c4:3)
+  [32m✓[0m Cognito sign-in returns only to the public HTTPS site  (https://www.awsteach.com/)
+
+[1mWhat the browser downloads[0m
+  [32m✓[0m config.json has no local-dev flag or local URLs
+  [32m✓[0m JavaScript bundle never calls a local address  (1 bundle(s))
+  [32m✓[0m public /api/health answers through CloudFront -> Lambda  ({"ok": true, "modelId": "us.anthropic.claude-sonnet-4-6"})
+
+[1mClass Insights[0m
+  [32m✓[0m Insights CloudFront origins are only S3 and Lambda Function URLs  (43754v4qfcjo6zncyb25ozmn2e0eujey.lambda-url.us-east-1.on.aws, ejnjsrtrtd7mxhciemyg4rbavm0klepj.lambda-url.us-east-1.on.aws, claimsinsights-sitee53d7754-v7gorvvojdp4.s3.us-east-1.amazonaws.com)
+  [32m✓[0m claims-insights-api: no local addresses or keys in environment
+  [32m✓[0m claims-insights-chat: no local addresses or keys in environment
+  [32m✓[0m Insights config.json has no local URLs
+  [32m✓[0m public Insights /api/insights/health answers through CloudFront -> Lambda
+
+20/20 independence checks passed
+Nothing deployed depends on this workstation. Final proof: shut it down and open the site from a phone.
+EXIT 0
